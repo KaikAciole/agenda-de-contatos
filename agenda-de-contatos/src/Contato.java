@@ -5,9 +5,24 @@ public class Contato {
     private ArrayList<Contato> contatos = new ArrayList<>();
 
     public Contato(String nome) {
-        this.nome = nome;
+        this.nome = nome.toLowerCase();
     }
 
+    public void adicionarContato(Contato contato){
+        contatos.add(contatos.size(), contato);
+    }
+
+    public  void removerContato(Contato contato){
+        contatos.remove(contato);
+
+    }
+
+    public void listaDeContatos(){
+        for (Contato contato : contatos) {
+            System.out.println(contato.getNome());
+        }
+
+    }
     @Override
     public String toString() {
         return "Contato{" +
@@ -22,4 +37,6 @@ public class Contato {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
 }
+

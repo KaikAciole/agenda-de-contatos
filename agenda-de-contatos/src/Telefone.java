@@ -1,6 +1,6 @@
 public class Telefone extends Contato{
     private int numero;
-    public Telefone(String nome, int numero) {
+    public Telefone(String nome, int numero, FiltroContato filtro) {
         super(nome);
         this.numero = numero;
     }
