@@ -3,18 +3,19 @@ import java.util.Date;
 public class Agenda {
     private String nome;
     private String sobrenome;
-    private int numero;
+    private String numero;
     EnumRelacionamento relacionamento;
     private Date aniversario;
     private String endereco;
 
-    public Agenda(String nome, int numero, String relacionamento){
+
+    public Agenda(String nome, String sobrenome, String relacionamento) {
         this.nome = nome;
-        this.numero = numero;
+        this.sobrenome = sobrenome;
         this.relacionamento = EnumRelacionamento.valueOf(relacionamento.toUpperCase());
     }
 
-    public void mostrarContato(){
+    public void mostrarContato() {
         System.out.println(this.nome);
         System.out.println(this.numero);
         System.out.println(this.relacionamento);
@@ -36,21 +37,21 @@ public class Agenda {
         this.sobrenome = sobrenome;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
-    public EnumRelacionamento getRelacionamento() {
-        return relacionamento;
-    }
+    //public EnumRelacionamento getRelacionamento() {
+        //return relacionamento;
+    //}
 
-    public void setRelacionamento(EnumRelacionamento relacionamento) {
-        this.relacionamento = relacionamento;
-    }
+    //public void setRelacionamento(EnumRelacionamento relacionamento) {
+        //this.relacionamento = relacionamento;
+    //}
 
     public Date getAniversario() {
         return aniversario;
@@ -67,4 +68,8 @@ public class Agenda {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-}
+
+    public void cadastraContato(int posicao, String nome, String sobrenome, String telefone) {
+    }
+
+  }

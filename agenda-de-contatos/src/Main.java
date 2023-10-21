@@ -1,6 +1,16 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
-        Agenda contato = new Agenda("Jeferson", 40028922, "amigo");
-        contato.mostrarContato();
+
+        Agenda agenda = new Agenda("Jeferson", "Aciole", "Amigo");
+        agenda.mostrarContato();
+        agenda.lista
+
+
     }
 }
