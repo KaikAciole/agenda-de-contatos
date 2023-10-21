@@ -1,53 +1,70 @@
-import java.util.ArrayList;
+import java.util.Date;
 
 public class Agenda {
-    private ArrayList<ContatoBasico> contatos;
-    Agenda(){
-        contatos = new ArrayList<>();
+    private String nome;
+    private String sobrenome;
+    private int numero;
+    EnumRelacionamento relacionamento;
+    private Date aniversario;
+    private String endereco;
+
+    public Agenda(String nome, int numero, String relacionamento){
+        this.nome = nome;
+        this.numero = numero;
+        this.relacionamento = EnumRelacionamento.valueOf(relacionamento.toUpperCase());
     }
 
-    public void inserir(ContatoBasico c){
-        contatos.add(c);
+    public void mostrarContato(){
+        System.out.println(this.nome);
+        System.out.println(this.numero);
+        System.out.println(this.relacionamento);
     }
 
-    public ContatoBasico buscar(String nome){
-        for(int i=0; i< contatos.size(); i++){
-           ContatoBasico c = contatos.get(i);
-           if(c.getNome().equalsIgnoreCase(nome)){
-               return contatos.get(i);
-           }
-        }
-           return null;
+    public String getNome() {
+        return nome;
     }
 
-    public ContatoBasico buscar(int pos){
-        if(pos>=0 && pos< contatos.size()){
-            return contatos.get(pos);
-        }
-        return null;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public Contato[] buscarGeral(String palavraChave){
-        ArrayList<ContatoBasico> todos = new ArrayList<>();
-        for(int i=0; i<contatos.size(); i++){
-            ContatoBasico c = contatos.get(i);
-            if(c.getDados().contains(palavraChave)){
-                todos.add(c);
-            }
-        }
-        Contato[] vet = new Contato[todos.size()];
-
-        return (todos.toArray(vet));
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public Contato[] busccarTodos(){
-        Contato[] vet = new Contato[contatos.size()];
-
-        return (contatos.toArray(vet));
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
-    public int getQuantidade(){
-        return contatos.size();
+    public int getNumero() {
+        return numero;
     }
 
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public EnumRelacionamento getRelacionamento() {
+        return relacionamento;
+    }
+
+    public void setRelacionamento(EnumRelacionamento relacionamento) {
+        this.relacionamento = relacionamento;
+    }
+
+    public Date getAniversario() {
+        return aniversario;
+    }
+
+    public void setAniversario(Date aniversario) {
+        this.aniversario = aniversario;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
 }
