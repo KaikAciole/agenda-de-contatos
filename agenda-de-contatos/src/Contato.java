@@ -1,42 +1,30 @@
-import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
-public class Contato {
-    private String nome;
-    private ArrayList<Contato> contatos = new ArrayList<>();
+public class Contato extends ContatoBasico {
+    protected Calendar dtNascimento;
 
-    public Contato(String nome) {
-        this.nome = nome.toLowerCase();
+    public Contato(String nome, Calendar dtNascimento) {
+        super(nome);
+        this.dtNascimento = dtNascimento;
     }
 
-    public void adicionarContato(Contato contato){
-        contatos.add(contatos.size(), contato);
-    }
-
-    public  void removerContato(Contato contato){
-        contatos.remove(contato);
-
-    }
-
-    public void listaDeContatos(){
-        for (Contato contato : contatos) {
-            System.out.println(contato.getNome());
-        }
-
-    }
     @Override
-    public String toString() {
-        return "Contato{" +
-                "nome='" + nome + '\'' +
-                '}';
+    public String getDados(){
+        return super.getDados()+"Nascido em "+
+                dtNascimento.get(Calendar.DATE)+"/"+
+                dtNascimento.get(Calendar.MONTH)+"/"+
+                dtNascimento.get(Calendar.YEAR)+"/"+ "\nIdade: ";
     }
 
-    public String getNome() {
-        return nome;
+    public int getIdade(){
+        Calendar hoje = new GregorianCalendar();
+        int idade = hoje.get(Calendar.YEAR)-dtNascimento.get(Calendar.YEAR);
+        hoje.set(Calendar.YEAR, dtNascimento.get(Calendar.YEAR));
+        if(hoje.before(dtNascimento)){
+            idade--;
+            return idade;
+        }
+        return idade;
     }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
 }
-
