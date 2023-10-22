@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Contato {
+public class Contato  {
     private String nome;
     private String sobrenome;
     private String numero;
@@ -15,7 +15,6 @@ public class Contato {
         this.numero = numero;
     }
 
-
     public Contato(String nome, String sobrenome, String numero, EnumRelacionamento relacionamento) {
         this(nome, sobrenome, numero);
         this.relacionamento = relacionamento;
@@ -23,6 +22,21 @@ public class Contato {
 
     public Contato(String nome, String sobrenome, String numero, EnumRelacionamento relacionamento, EnumTipoContato redeSocial){
         this(nome, sobrenome, numero, relacionamento);
+        this.redeSocial = redeSocial;
+    }
+    public EnumRelacionamento getRelacionamento() {
+        return relacionamento;
+    }
+
+    public void setRelacionamento(EnumRelacionamento relacionamento) {
+        this.relacionamento = relacionamento;
+    }
+
+    public EnumTipoContato getRedeSocial() {
+        return redeSocial;
+    }
+
+    public void setRedeSocial(EnumTipoContato redeSocial) {
         this.redeSocial = redeSocial;
     }
 
@@ -83,4 +97,10 @@ public class Contato {
     public void cadastraContato(int posicao, String nome, String sobrenome, String telefone) {
     }
 
+    public void imprimir(){
+        System.out.println(getNome());
+        System.out.println(getNumero());
+        System.out.println(getEndereco());
+        System.out.println(getRedeSocial());
+    }
   }

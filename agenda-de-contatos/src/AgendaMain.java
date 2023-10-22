@@ -16,12 +16,12 @@ public class AgendaMain {
     private static String menu(Scanner scanner) {
         System.out.print(
                 "\n---\nMENU\n" +
-                        "(A)adastrar Contato\n" +
-                        "(B)istar Contatos\n" +
-                        "(C)xibir Contato\n" +
-                        "(D)emover Contato\n" +
+                        "(A)Cadastrar Contato\n" +
+                        "(B)Listar Contatos\n" +
+                        "(C)Exibir Contato\n" +
+                        "(D)Remover Contato\n" +
                         "(E)Exportar CSV\n" +
-                        "(F)air\n" +
+                        "(F)Sair\n" +
                         "\n" +
                         "Opção> ");
         return scanner.next().toUpperCase();
