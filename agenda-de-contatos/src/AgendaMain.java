@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class AgendaMain {
 
     public static void main(String[] args) {
-        AgendaController agenda = new AgendaController();
+        Agenda agenda = new Agenda();
 
         Scanner scanner = new Scanner(System.in);
         String escolha = "";
@@ -27,7 +27,7 @@ public class AgendaMain {
         return scanner.next().toUpperCase();
     }
 
-    private static void comando(String opcao, AgendaController agenda, Scanner scanner) {
+    private static void comando(String opcao, Agenda agenda, Scanner scanner) {
         switch (opcao) {
             case "A":
                 cadastraContato(agenda, scanner);
@@ -41,7 +41,7 @@ public class AgendaMain {
 
     }
 
-    private static void cadastraContato(AgendaController agenda, Scanner scanner) {
+    private static void cadastraContato(Agenda agenda, Scanner scanner) {
         System.out.print("\nNome: ");
         String nome = scanner.next();
         System.out.print("\nSobrenome: ");
@@ -49,10 +49,10 @@ public class AgendaMain {
         System.out.print("\nNúmero: ");
         String numero = scanner.next();
 
-        agenda.cadastraAgenda(nome, sobrenome, numero);
+        agenda.adicionarContato(nome, sobrenome, numero);
     }
 
-    private static void listaContatos(AgendaController agenda) {
+    private static void listaContatos(Agenda agenda) {
         System.out.println(agenda.listaContatos());
     }
 }

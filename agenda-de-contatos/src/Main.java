@@ -1,15 +1,9 @@
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-
 public class Main {
     public static void main(String[] args) {
 
-        Agenda agenda = new Agenda("Jeferson", "Aciole", "Amigo");
-        agenda.mostrarContato();
-        agenda.lista
+        Contato contato = new Contato("Jeferson", "Aciole", "Amigo");
+        contato.mostrarContato();
+        contato.lista
 
 
     }
