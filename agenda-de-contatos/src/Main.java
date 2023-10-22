@@ -3,7 +3,7 @@ public class Main {
 
         Contato contato = new Contato("Jeferson", "Aciole", "Amigo");
         contato.mostrarContato();
-        contato.lista
+
 
 
     }
