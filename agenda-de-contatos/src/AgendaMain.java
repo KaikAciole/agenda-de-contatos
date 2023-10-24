@@ -8,6 +8,7 @@ public class AgendaMain {
 
         Scanner scanner = new Scanner(System.in);
         String escolha = "";
+
         while (true) {
             escolha = menu(scanner);
             comando(escolha, agenda, scanner);
@@ -59,7 +60,7 @@ public class AgendaMain {
         System.out.print("Número: ");
         String numero = scanner.next();
 
-        agenda.adicionaContato(nome, sobrenome, numero);
+        agenda.adicionarContato(nome, sobrenome, numero);
     }
 
     private static void listaContatos(Agenda agenda) {

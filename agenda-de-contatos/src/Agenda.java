@@ -87,6 +87,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if ((contato.getNome()).equalsIgnoreCase(nome)) {
                 contato.setRedeSocial(x);
+
             }
         }
     }
