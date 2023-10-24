@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class AgendaMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Agenda agenda = new Agenda();
 
         Scanner scanner = new Scanner(System.in);
@@ -27,26 +28,28 @@ public class AgendaMain {
         return scanner.next().toUpperCase();
     }
 
-    private static void comando(String opcao, Agenda agenda, Scanner scanner) {
+    private static void comando(String opcao, Agenda agenda, Scanner scanner) throws IOException {
         switch (opcao) {
             case "A":
-                cadastraContato(agenda, scanner);
+                adicionaContato(agenda, scanner);
                 break;
             case "B":
                 listaContatos(agenda);
                 break;
+            case "E":
+                exportaContatos(agenda);
+                break;
             default:
                 System.out.println("Opção inválida!");
         }
-
     }
 
-    private static void cadastraContato(Agenda agenda, Scanner scanner) {
-        System.out.print("\nNome: ");
+    private static void adicionaContato(Agenda agenda, Scanner scanner) {
+        System.out.print("Nome: ");
         String nome = scanner.next();
-        System.out.print("\nSobrenome: ");
+        System.out.print("Sobrenome: ");
         String sobrenome = scanner.next();
-        System.out.print("\nNúmero: ");
+        System.out.print("Número: ");
         String numero = scanner.next();
 
         agenda.adicionarContato(nome, sobrenome, numero);
@@ -54,5 +57,10 @@ public class AgendaMain {
 
     private static void listaContatos(Agenda agenda) {
         System.out.println(agenda.listaContatos());
+    }
+
+    private static void exportaContatos(Agenda agenda) throws IOException {
+        agenda.exportaContatos();
+        System.out.println("");
     }
 }
