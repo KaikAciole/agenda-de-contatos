@@ -18,13 +18,20 @@ public class AgendaMain {
         System.out.print(
                 "\n---\nMENU\n" +
                         "(A)Cadastrar Contato\n" +
+
                         "(B)Listar Contatos\n" +
                         "(C)Exibir Contato\n" +
                         "(D)Remover Contato\n" +
                         "(E)Exportar CSV\n" +
                         "(F)Sair\n" +
+
+                        "(B)listar Contatos\n" +
+                        "(C)exibir Contato\n" +
+                        "(D)remover Contato\n" +
+                        "(E)Exportar CSV\n" +
+                        "(F)sair\n" +
                         "\n" +
-                        "Opção> ");
+                        "Opção: ");
         return scanner.next().toUpperCase();
     }
 
@@ -52,7 +59,7 @@ public class AgendaMain {
         System.out.print("Número: ");
         String numero = scanner.next();
 
-        agenda.adicionarContato(nome, sobrenome, numero);
+        agenda.adicionaContato(nome, sobrenome, numero);
     }
 
     private static void listaContatos(Agenda agenda) {
