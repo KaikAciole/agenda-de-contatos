@@ -3,5 +3,6 @@ public enum EnumRelacionamento {
     FAMILIA,
     AMIGO,
     INIMIGO,
+
     EMERGENCIA
 }

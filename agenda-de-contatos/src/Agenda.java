@@ -13,81 +13,42 @@ public class Agenda {
     @Override
     public String toString() {
         return "Agenda{" +
-                "agendas=" + agendas +
+                "agendas=" + contatos +
                 '}';
     }
 
     public void adicionarContato(String nome, String sobrenome, String numero) {
-        Contato contato = new Contato(nome.toLowerCase(), sobrenome, numero);
-        agendas.add(contato);
-
-    public void adicionaContato(String nome, String sobrenome, String numero) {
         Contato contato = new Contato(nome, sobrenome, numero);
-        this.contatos.add(contato);
-
+        contatos.add(contato);
     }
 
     public String listaContatos() {
-        StringBuffer out = new StringBuffer();
+        StringBuffer sb = new StringBuffer();
 
-        for(Contato contato : this.contatos){
-            out.append(contato);
+        for (Contato contato : contatos) {
+            sb.append(contato.getNome() + " " + contato.getSobrenome() + "\n");
         }
-
-        return out.toString();
+        return sb.toString();
     }
 
-    public void setRelacionamento(String nome, EnumRelacionamento x){
-        for (Contato contato : agendas) {
-            if((contato.getNome()).equalsIgnoreCase(nome)){
-                contato.setRelacionamento(x);
+    public Contato selecionarContato(String nome, String sobrenome) {
+        for (Contato c : contatos) {
+            if (c.getNome().equalsIgnoreCase(nome) && c.getSobrenome().equalsIgnoreCase(sobrenome)) {
+                return c;
             }
         }
-
+        return null;
     }
 
-    public void getRelacionamento(String nome){
-        for (Contato contato : agendas) {
-            if((contato.getNome()).equalsIgnoreCase(nome)){
-                System.out.println(contato.getRelacionamento());
-            }
-        }
-    }public void setRedeSocial(String nome, EnumTipoContato x){
-        for (Contato contato : agendas) {
-            if((contato.getNome()).equalsIgnoreCase(nome)){
-                contato.setRedeSocial(x);
-            }
-        }
-
-    }
-
-    public void getRedeSocial(String nome){
-        for (Contato contato : agendas) {
-            if((contato.getNome()).equalsIgnoreCase(nome)){
-                System.out.println(contato.getRedeSocial());
-            }
+    public String exibirContato(String nome, String sobrenome) {
+        if (selecionarContato(nome, sobrenome) != null) {
+            Contato ctt = selecionarContato(nome, sobrenome);
+            return ctt.getNome() + " " + ctt.getSobrenome() + " - " + ctt.getNumero() + ctt.getRelacionamento() + ctt.getAniversario().toString();
+        } else {
+            return "Esse contato não existe!";
         }
     }
 
-    public void getContatosWhats(){
-        for (Contato contato : agendas) {
-            if((contato.getRedeSocial()).equals(EnumTipoContato.WHATSAPP)){
-                System.out.println(contato.getNome());
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        Agenda agenda1 = new Agenda();
-        agenda1.adicionarContato("zezo", "chico", "83921312832");
-        agenda1.adicionarContato("zefa", "chica", "12832");
-        agenda1.adicionarContato("jose", "viv", "1283132");
-        agenda1.setRedeSocial("ZeZo", EnumTipoContato.WHATSAPP);
-        agenda1.setRedeSocial("Zefa", EnumTipoContato.WHATSAPP);
-        agenda1.setRedeSocial("josE", EnumTipoContato.WHATSAPP);
-        agenda1.getContatosWhats();
-
-    } 
     public void exportaContatos() throws IOException {
         OutputStream fos = new FileOutputStream("agenda.csv");
         Writer osw = new OutputStreamWriter(fos);
@@ -95,7 +56,7 @@ public class Agenda {
 
         bw.write("Nome;Sobrenome;Numero");
 
-        for (Contato contato : this.contatos) {
+        for (Contato contato : contatos) {
 
             String escreveContato =  contato.getNome() + ";" + contato.getSobrenome() + ";" + contato.getNumero();
             bw.newLine();
@@ -103,6 +64,47 @@ public class Agenda {
         }
 
         bw.close();
+    }
 
+    public void setRelacionamento(String nome, EnumRelacionamento x) {
+        for (Contato contato : contatos) {
+            if ((contato.getNome()).equalsIgnoreCase(nome)) {
+                contato.setRelacionamento(x);
+            }
+        }
+    }
+
+    public EnumRelacionamento getRelacionamento(String nome, String sobrenome) {
+        for (Contato contato : contatos) {
+            if (contato.getNome().equalsIgnoreCase(nome) && contato.getSobrenome().equalsIgnoreCase(sobrenome)) {
+                return contato.getRelacionamento();
+            }
+        }
+        return null;
+    }
+
+    public void setRedeSocial(String nome, EnumTipoContato x) {
+        for (Contato contato : contatos) {
+            if ((contato.getNome()).equalsIgnoreCase(nome)) {
+                contato.setRedeSocial(x);
+
+            }
+        }
+    }
+
+    public void getRedeSocial(String nome) {
+        for (Contato contato : contatos) {
+            if ((contato.getNome()).equalsIgnoreCase(nome)) {
+                System.out.println(contato.getRedeSocial());
+            }
+        }
+    }
+
+    public void getContatosWhats() {
+        for (Contato contato : contatos) {
+            if ((contato.getRedeSocial()).equals(EnumTipoContato.WHATSAPP)) {
+                System.out.println(contato.getNome());
+            }
+        }
     }
 }
