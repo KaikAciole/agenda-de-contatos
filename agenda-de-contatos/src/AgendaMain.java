@@ -22,7 +22,8 @@ public class AgendaMain {
                         "(C)exibir Contato\n" +
                         "(D)remover Contato\n" +
                         "(E)Exportar CSV\n" +
-                        "(F)sair\n" +
+                        "(F)Editar Contato\n"+
+                        "(G)sair\n" +
                         "\n" +
                         "Opção: ");
         return scanner.next().toUpperCase();
@@ -60,7 +61,7 @@ public class AgendaMain {
         String sobrenome = scanner.next();
         System.out.print("Número: ");
         String numero = scanner.next();
-        System.out.print("Relacionamento: AMIGO(1) PAI/MÃE(2): ");
+        System.out.print("Relacionamento:\n'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
         String relacionamento = scanner.next().toUpperCase();
 
         agenda.adicionaContato(nome, sobrenome, numero , Relacionamento.valueOf(relacionamento));
@@ -96,4 +97,6 @@ public class AgendaMain {
         String nomeMudado = scanner.next();
         agenda.setNome(nome, nomeMudado);
     }
+
+
 }

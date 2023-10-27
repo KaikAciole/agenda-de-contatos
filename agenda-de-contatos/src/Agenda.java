@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Date;
 
 public class Agenda {
 
@@ -39,12 +38,13 @@ public class Agenda {
         }
         return null;
     }
-    public void removerContato(String nome){
+    public boolean removerContato(String nome){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
-                contatos.remove(contato);
+                return contatos.remove(contato);
             }
         }
+        return false;
     }
 
     public void setNome(String nome, String nomeMudado){
@@ -87,12 +87,20 @@ public class Agenda {
         }
     }
 
-    public void setAniversario(){
-
+    public void setAniversario(String nome, Date x){
+        for (Contato contato : contatos) {
+            if(contato.getNome().equalsIgnoreCase(nome)){
+                contato.setAniversario(x);
+            }
+        }
     }
 
-    public void setEndereco(){
-
+    public void setEndereco(String nome,  String endereço){
+        for (Contato contato : contatos) {
+            if(contato.getNome().equalsIgnoreCase(nome)){
+                contato.setNome(endereço);
+            }
+        }
     }
 
     public void exportaContatos() throws IOException {
@@ -100,12 +108,11 @@ public class Agenda {
         Writer osw = new OutputStreamWriter(fos);
         BufferedWriter bw = new BufferedWriter(osw);
 
-
         bw.write("Nome;Sobrenome;Numero;Relacionamento");
 
-        for (Contato contato : this.contatos.values()) {
+        for (Contato contato : contatos) {
 
-            String escreveContato = contato.getNome() + ";" + contato.getSobrenome() + ";" + contato.getNumero() + ";" + contato.relacionamento;
+            String escreveContato =  contato.getNome() + ";" + contato.getSobrenome() + ";" + contato.getNumero() + ";" + contato.getRelacionamento();
             bw.newLine();
             bw.write(escreveContato);
         }
