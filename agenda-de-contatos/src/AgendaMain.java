@@ -17,7 +17,7 @@ public class AgendaMain {
     private static String menu(Scanner scanner) {
         System.out.print(
                 "\n---\nMENU\n" +
-                        "(A)Cadastrar Contato\n" +
+                        "(A)Adicionar Contato\n" +
                         "(B)listar Contatos\n" +
                         "(C)exibir Contato\n" +
                         "(D)remover Contato\n" +
@@ -39,6 +39,15 @@ public class AgendaMain {
             case "E":
                 exportaContatos(agenda);
                 break;
+            case "C":
+                exibirContato(agenda, scanner);
+                break;
+            case "D":
+                removerContato(agenda, scanner);
+                break;
+            case "F":
+                setNome(agenda, scanner);
+                break;
             default:
                 System.out.println("Opção inválida!");
         }
@@ -51,8 +60,11 @@ public class AgendaMain {
         String sobrenome = scanner.next();
         System.out.print("Número: ");
         String numero = scanner.next();
+        System.out.print("Relacionamento: AMIGO(1) PAI/MÃE(2): ");
+        String relacionamento = scanner.next().toUpperCase();
 
-        agenda.adicionaContato(nome, sobrenome, numero);
+        agenda.adicionaContato(nome, sobrenome, numero , Relacionamento.valueOf(relacionamento));
+        System.out.println("CONTATO ADICIONADO ✅");
     }
 
     private static void listaContatos(Agenda agenda) {
@@ -61,6 +73,27 @@ public class AgendaMain {
 
     private static void exportaContatos(Agenda agenda) throws IOException {
         agenda.exportaContatos();
-        System.out.println("");
+        System.out.println("Contatos exportados ✅");
+    }
+    private static void exibirContato(Agenda agenda, Scanner scanner){
+        System.out.print("Qual contato: ");
+        String nome = scanner.next();
+        System.out.println("Detalhes de " + nome);
+        System.out.print(agenda.exibirContato(nome));
+        //settar metodos não obrigatorios aqui
+    }
+    private static void removerContato(Agenda agenda, Scanner scanner){
+        System.out.print("Qual contato: ");
+        String nome = scanner.next();
+        System.out.println("Contato " + nome + " removido com sucesso!");
+        System.out.print(agenda.removerContato(nome));
+    }
+
+    private static void setNome(Agenda agenda, Scanner scanner){
+        System.out.println("Qual nome você quer mudar? ");
+        String nome = scanner.next();
+        System.out.println("Por qual nome quer substituir?");
+        String nomeMudado = scanner.next();
+        agenda.setNome(nome, nomeMudado);
     }
 }
