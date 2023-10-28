@@ -86,6 +86,14 @@ public class Contato {
 
     @Override
     public String toString() {
-        return "------------------ \n" + nome + " " +  sobrenome + ": \n" + "(" + numero + ")";
+        return "Contato" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", numero='" + numero + '\'' +
+                ", relacionamento=" + relacionamento +
+                ", redeSocial=" + redeSocial +
+                ", aniversario='" + aniversario + '\'' +
+                ", endereco='" + endereco + '\'' +
+                '}';
     }
 }

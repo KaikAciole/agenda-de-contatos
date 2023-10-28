@@ -97,7 +97,7 @@ public class Agenda {
     public void setEndereco(String nome,  String endereco){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setNome(endereco);
+                contato.setEndereco(endereco);
             }
         }
     }
