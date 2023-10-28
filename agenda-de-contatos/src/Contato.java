@@ -4,33 +4,28 @@ public class Contato {
     private String nome;
     private String sobrenome;
     private String numero;
-    EnumRelacionamento relacionamento;
-    EnumTipoContato redeSocial;
-    private Date aniversario;
+    Relacionamento relacionamento;
+    RedeSocial redeSocial;
+    private String aniversario;
     private String endereco;
 
-    public Contato(String nome, String sobrenome, String numero){
+    public Contato(String nome, String sobrenome, String numero) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.numero = numero;
     }
 
 
-    public Contato(String nome, String sobrenome, String numero, EnumRelacionamento relacionamento) {
+    public Contato(String nome, String sobrenome, String numero, Relacionamento relacionamento) {
         this(nome, sobrenome, numero);
         this.relacionamento = relacionamento;
     }
 
-    public Contato(String nome, String sobrenome, String numero, EnumRelacionamento relacionamento, EnumTipoContato redeSocial){
+    public Contato(String nome, String sobrenome, String numero, Relacionamento relacionamento, RedeSocial redeSocial) {
         this(nome, sobrenome, numero, relacionamento);
-        this.redeSocial = redeSocial;
+
     }
 
-    public void mostrarContato() {
-        System.out.println(this.nome);
-        System.out.println(this.numero);
-        System.out.println(this.relacionamento);
-    }
 
     public String getNome() {
         return nome;
@@ -56,20 +51,28 @@ public class Contato {
         this.numero = numero;
     }
 
-    //public EnumRelacionamento getRelacionamento() {
-        //return relacionamento;
-    //}
+    public Relacionamento getRelacionamento() {
+        return relacionamento;
+    }
 
-    //public void setRelacionamento(EnumRelacionamento relacionamento) {
-        //this.relacionamento = relacionamento;
-    //}
+    public void setRelacionamento(Relacionamento relacionamento) {
+        this.relacionamento = relacionamento;
+    }
 
-    public Date getAniversario() {
+    public RedeSocial getRedeSocial() {
+        return redeSocial;
+    }
+
+    public void setRedeSocial(RedeSocial redeSocial) {
+        this.redeSocial = redeSocial;
+    }
+
+    public String getAniversario() {
         return aniversario;
     }
 
     public void setAniversario(Date aniversario) {
-        this.aniversario = aniversario;
+        this.aniversario = String.valueOf(aniversario);
     }
 
     public String getEndereco() {
@@ -80,7 +83,9 @@ public class Contato {
         this.endereco = endereco;
     }
 
-    public void cadastraContato(int posicao, String nome, String sobrenome, String telefone) {
-    }
 
-  }
+    @Override
+    public String toString() {
+        return "------------------ \n" + nome + " " +  sobrenome + ": \n" + "(" + numero + ")";
+    }
+}

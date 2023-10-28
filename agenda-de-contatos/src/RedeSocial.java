@@ -1,4 +1,4 @@
-public enum EnumTipoContato {
+public enum RedeSocial {
     WHATSAPP,
     TELEGRAM,
     EMAIL
