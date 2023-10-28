@@ -36,10 +36,11 @@ public class AgendaMain {
         switch (opcao) {
             case "A" -> adicionaContato(agenda, scanner);
             case "B" -> listaContatos(agenda);
-            case "E" -> exportaContatos(agenda);
             case "C" -> exibirContato(agenda, scanner);
             case "D" -> removerContato(agenda, scanner);
-            case "F" -> setNome(agenda, scanner);
+            case "E" -> exportaContatos(agenda);
+            case "F" -> editar(agenda, scanner);
+
             default -> System.out.println("Opção inválida!");
         }
     }
@@ -80,13 +81,31 @@ public class AgendaMain {
         System.out.print(agenda.removerContato(nome));
     }
 
-    private static void setNome(Agenda agenda, Scanner scanner){
-        System.out.println("Qual nome você quer mudar? ");
+    private static void editar(Agenda agenda, Scanner scanner){
+        System.out.println("Qual contatato você quer editar: ");
         String nome = scanner.next();
-        System.out.println("Por qual nome quer substituir?");
-        String nomeMudado = scanner.next();
-        agenda.setNome(nome, nomeMudado);
 
+        System.out.println("Oque você quer editar: Nome'A' Sobrenome'B' Relacionamento'C 'Endereço'D' ");
+        String opc = scanner.next();
+
+        if (opc.equalsIgnoreCase("A")) {
+            System.out.println("Por qual nome quer substituir? ");
+            String nomeMudado = scanner.next();
+            agenda.setNome(nome, nomeMudado);
+        } else if (opc.equalsIgnoreCase("B")) {
+            System.out.println("Por qual sobrenome quer substituir? ");
+            String sobrenoMudado = scanner.next();
+            agenda.setSobrenome(nome, sobrenoMudado);
+        } else if (opc.equalsIgnoreCase("c")) {
+            System.out.println("Para qual tipo de relacionamento deseja substituir: ");
+            System.out.print("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
+            String relacionamento = scanner.next().toUpperCase();
+            agenda.setRelacionamento(nome, Relacionamento.valueOf(relacionamento));
+        } else if (opc.equalsIgnoreCase("D")) {
+            System.out.println("Adicione ou mude o endereço");
+            String endereco = scanner.next();
+            agenda.setEndereco(nome, endereco);
+        }
     }
 
 
