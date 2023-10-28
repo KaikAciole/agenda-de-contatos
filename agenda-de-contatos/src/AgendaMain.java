@@ -86,6 +86,7 @@ public class AgendaMain {
         System.out.println("Por qual nome quer substituir?");
         String nomeMudado = scanner.next();
         agenda.setNome(nome, nomeMudado);
+
     }
 
 
