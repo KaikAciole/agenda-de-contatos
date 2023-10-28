@@ -86,14 +86,26 @@ public class Contato {
 
     @Override
     public String toString() {
-        return "Contato" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", numero='" + numero + '\'' +
-                ", relacionamento=" + relacionamento +
-                ", redeSocial=" + redeSocial +
-                ", aniversario='" + aniversario + '\'' +
-                ", endereco='" + endereco + '\'' +
-                '}';
+        if(relacionamento == null){
+            relacionamento = Relacionamento.valueOf(("Notinfo"));
+        }
+        if(redeSocial == null){
+            redeSocial = RedeSocial.valueOf(("Ninfo"));
+        }
+        if(aniversario == null){
+            aniversario = "❌ Não informado";
+        }
+        if(endereco == null){
+            endereco = "❌ Não informado";
+        }
+        return "-------------------------" + "\n" +
+                "nome: " + nome + "\n" +
+                "sobrenome: " + sobrenome + "\n" +
+                "numero: " + numero + "\n" +
+                "relacionamento: " + relacionamento + "\n" +
+                "redeSocial: " + redeSocial + "\n" +
+                "aniversario: " + aniversario + "\n" +
+                "endereco: " + endereco + "\n" +
+                "-------------------------";
     }
 }

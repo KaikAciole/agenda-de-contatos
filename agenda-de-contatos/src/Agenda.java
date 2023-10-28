@@ -18,7 +18,7 @@ public class Agenda {
         StringBuffer out = new StringBuffer();
 
         for (Contato x : contatos) {
-            out.append(x.getNome() + " " + x.getSobrenome() + ": " + x.getNumero());
+            out.append(x.getNome() + " " + x.getSobrenome() + ": \n\uD83D\uDCDE " + x.getNumero() + "\n-------------------\n");
         }
         return out.toString();
     }
@@ -29,7 +29,7 @@ public class Agenda {
                 return contato.toString();
             }
         }
-        return null;
+        return "Não informado";
     }
     public boolean removerContato(String nome){
         for (Contato contato : contatos) {
@@ -85,14 +85,14 @@ public class Agenda {
         }
     }
 
-    public void setAniversario(String nome, String x){
-        for (Contato contato : contatos) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setAniversario(x);
-                break;
-            }
-        }
-    }
+//    public void setAniversario(String nome, String x){
+//        for (Contato contato : contatos) {
+//            if(contato.getNome().equalsIgnoreCase(nome)){
+//                contato.setAniversario(x);
+//                break;
+//            }
+//        }
+//    }
 
     public void setEndereco(String nome,  String endereco){
         for (Contato contato : contatos) {
@@ -108,11 +108,12 @@ public class Agenda {
         Writer osw = new OutputStreamWriter(fos);
         BufferedWriter bw = new BufferedWriter(osw);
 
-        bw.write("Nome;Sobrenome;Numero;Relacionamento");
+        bw.write("Nome;Sobrenome;Numero;Relacionamento;Endereço;Aniversario;Rede social");
 
         for (Contato contato : contatos) {
 
-            String escreveContato =  contato.getNome() + ";" + contato.getSobrenome() + ";" + contato.getNumero() + ";" + contato.getRelacionamento();
+            String escreveContato =  contato.getNome() + ";" +  contato.getSobrenome() + ";" + contato.getNumero() + ";" +
+                    contato.getRelacionamento() + ";" + contato.getEndereco() + ";" + contato.getAniversario() + ";" + contato.getRedeSocial();
             bw.newLine();
             bw.write(escreveContato);
         }

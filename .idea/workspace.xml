@@ -10,11 +10,10 @@
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Contato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/RedeSocial.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/RedeSocial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Relacionamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Relacionamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
     </list>
-    <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="">
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
-    </list>
+    <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,36 +26,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java">
-      <ranges>
-        <range start1="2" end1="3" start2="2" end2="2" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="9" end1="10" start2="8" end2="9" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="12" end1="15" start2="11" end2="14" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="20" end1="28" start2="19" end2="21" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="31" end1="31" start2="24" end2="25" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="52" end1="52" start2="46" end2="47" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="60" end1="60" start2="55" end2="56" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="68" end1="68" start2="64" end2="65" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="76" end1="76" start2="73" end2="74" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="84" end1="84" start2="82" end2="83" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="88" end1="89" start2="87" end2="88" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="92" end1="92" start2="91" end2="92" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="100" end1="100" start2="100" end2="101" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java">
-      <ranges>
-        <range start1="36" end1="37" start2="36" end2="37" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="47" end1="48" start2="47" end2="48" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="54" end1="56" start2="54" end2="54" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="57" end1="58" start2="55" end2="56" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
-        <range start1="83" end1="85" start2="81" end2="83" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="87" end1="89" start2="85" end2="88" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-        <range start1="90" end1="111" start2="89" end2="138" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,6 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Ramom/ExercicioPoo/agendaDeContatos-ramonteste",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
