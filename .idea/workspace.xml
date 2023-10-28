@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
-    </list>
-    <list id="13234b54-cbc7-4d4f-bc39-debf47e7d404" name="Changes by Ramon" comment="">
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="menuEdição update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/RedeSocial.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/RedeSocial.java" afterDir="false" />
+    </list>
+    <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="">
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,36 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="2" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="9" end1="10" start2="8" end2="9" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="12" end1="15" start2="11" end2="14" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="20" end1="28" start2="19" end2="21" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="31" end1="31" start2="24" end2="25" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="52" end1="52" start2="46" end2="47" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="60" end1="60" start2="55" end2="56" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="68" end1="68" start2="64" end2="65" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="76" end1="76" start2="73" end2="74" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="84" end1="84" start2="82" end2="83" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="88" end1="89" start2="87" end2="88" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="92" end1="92" start2="91" end2="92" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="100" end1="100" start2="100" end2="101" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java">
+      <ranges>
+        <range start1="36" end1="37" start2="36" end2="37" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="47" end1="48" start2="47" end2="48" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="54" end1="56" start2="54" end2="54" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="57" end1="58" start2="55" end2="56" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="83" end1="85" start2="81" end2="83" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="87" end1="89" start2="85" end2="88" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="90" end1="111" start2="89" end2="138" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -38,20 +70,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Kaik&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="AgendaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AgendaMain" />
@@ -75,11 +107,44 @@
       <option name="presentableId" value="Default" />
       <updated>1698466643351</updated>
       <workItem from="1698466649026" duration="1516000" />
-      <workItem from="1698505907887" duration="1498000" />
+      <workItem from="1698505907887" duration="12408000" />
     </task>
+    <task id="LOCAL-00001" summary="menu de edição">
+      <option name="closed" value="true" />
+      <created>1698510136650</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698510136650</updated>
+    </task>
+    <task id="LOCAL-00002" summary="menu de edição">
+      <option name="closed" value="true" />
+      <created>1698510634428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698510634428</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="menu de edição" />
+    <MESSAGE value="menuEdição update" />
+    <option name="LAST_COMMIT_MESSAGE" value="menuEdição update" />
   </component>
 </project>

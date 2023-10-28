@@ -34,7 +34,7 @@ public class AgendaMain {
 
     private static void comando(String opcao, Agenda agenda, Scanner scanner) throws IOException {
         switch (opcao) {
-            case "A" -> adicionaContato(agenda, scanner);
+            case "A" -> adicionarContato(agenda, scanner);
             case "B" -> listaContatos(agenda);
             case "C" -> exibirContato(agenda, scanner);
             case "D" -> removerContato(agenda, scanner);
@@ -45,17 +45,15 @@ public class AgendaMain {
         }
     }
 
-    private static void adicionaContato(Agenda agenda, Scanner scanner) {
+    private static void adicionarContato(Agenda agenda, Scanner scanner) {
         System.out.print("Nome: ");
         String nome = scanner.next();
         System.out.print("Sobrenome: ");
         String sobrenome = scanner.next();
         System.out.print("Número: ");
         String numero = scanner.next();
-        System.out.print("Relacionamento:\n'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
-        String relacionamento = scanner.next().toUpperCase();
 
-        agenda.adicionaContato(nome, sobrenome, numero , Relacionamento.valueOf(relacionamento));
+        agenda.adicionaContato(nome, sobrenome, numero );
         System.out.println("CONTATO ADICIONADO ✅");
     }
 

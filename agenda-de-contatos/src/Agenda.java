@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Agenda {
 
@@ -10,9 +9,9 @@ public class Agenda {
         this.contatos = new ArrayList<>();
     }
 
-    public void adicionaContato(String nome, String sobrenome, String numero, Relacionamento relacionamento) {
-        Contato contato = new Contato(nome, sobrenome, numero, relacionamento);
-        this.contatos.add(contato);
+    public void adicionaContato(String nome, String sobrenome, String numero) {
+        Contato contato = new Contato(nome, sobrenome, numero);
+        contatos.add(contato);
     }
 
     public String listaContatos() {
@@ -50,6 +49,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setNome(nomeMudado);
+                break;
             }
         }
     }
@@ -58,6 +58,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setSobrenome(sobrenome);
+                break;
             }
         }
     }
@@ -66,6 +67,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setNumero(numero);
+                break;
             }
         }
     }
@@ -86,7 +88,7 @@ public class Agenda {
         }
     }
 
-    public void setAniversario(String nome, Date x){
+    public void setAniversario(String nome, String x){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setAniversario(x);
@@ -98,6 +100,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setEndereco(endereco);
+                break;
             }
         }
     }
