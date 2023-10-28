@@ -6,7 +6,7 @@ public class Agenda {
     private ArrayList<Contato> contatos;
 
     public Agenda() {
-        this.contatos = new ArrayList<>();
+        contatos = new ArrayList<>();
     }
 
     public void adicionaContato(String nome, String sobrenome, String numero) {
@@ -17,17 +17,12 @@ public class Agenda {
     public String listaContatos() {
         StringBuffer out = new StringBuffer();
 
-        int i = 0;
-        for (Contato x : this.contatos) {
-            if (i == 0) {
-                out.append(x.toString());
-            } else {
-                out.append("\n").append(x.toString());
-            }
-            i++;
+        for (Contato x : contatos) {
+            out.append(x.getNome() + " " + x.getSobrenome() + ": " + x.getNumero());
         }
         return out.toString();
     }
+
     public String exibirContato(String nome){
         for (Contato contato : contatos) {
             if (contato.getNome().equalsIgnoreCase(nome)){
@@ -76,6 +71,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setRelacionamento(x);
+                break;
             }
         }
     }
@@ -84,6 +80,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setRedeSocial(x);
+                break;
             }
         }
     }
@@ -92,6 +89,7 @@ public class Agenda {
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
                 contato.setAniversario(x);
+                break;
             }
         }
     }
