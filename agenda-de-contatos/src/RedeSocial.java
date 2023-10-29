@@ -1,7 +1,7 @@
 public enum RedeSocial {
-    WHATSAPP("Whatsapp"),
-    TELEGRAM("Telegram"),
-    TELEFONE("Telefone"),
+    A("Whatsapp"),
+    B("Telegram"),
+    C("Telefone"),
     Ninfo("❌ Não informado");
     private final String nome;
 

@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="menuEdição update">
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="falta só o resto do filtro.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Contato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/RedeSocial.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/RedeSocial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Relacionamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Relacionamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
     </list>
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="" />
+    <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="">
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +30,34 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java">
+      <ranges>
+        <range start1="87" end1="95" start2="87" end2="95" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="105" end1="105" start2="105" end2="119" changelist="0da335a2-c9be-4e6f-8e80-473a07198cca" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java">
+      <ranges>
+        <range start1="18" end1="28" start2="18" end2="31" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="33" end1="53" start2="36" end2="44" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="64" end1="65" start2="55" end2="56" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="76" end1="77" start2="67" end2="69" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="83" end1="84" start2="75" end2="77" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="89" end1="89" start2="82" end2="96" changelist="0da335a2-c9be-4e6f-8e80-473a07198cca" />
+        <range start1="90" end1="91" start2="97" end2="98" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="95" end1="96" start2="102" end2="103" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="109" end1="121" start2="116" end2="120" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="122" end1="124" start2="121" end2="129" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="127" end1="129" start2="132" end2="133" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="131" end1="132" start2="135" end2="136" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="134" end1="135" start2="138" end2="139" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="140" end1="141" start2="144" end2="145" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="142" end1="143" start2="146" end2="147" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+        <range start1="148" end1="148" start2="152" end2="154" changelist="95fcf6ac-ec94-403f-8218-629167afa84a" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,6 +76,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Ramom/ExercicioPoo/agendaDeContatos-ramonteste",
     "node.js.detected.package.eslint": "true",
@@ -78,6 +111,8 @@
       <updated>1698466643351</updated>
       <workItem from="1698466649026" duration="1516000" />
       <workItem from="1698505907887" duration="12408000" />
+      <workItem from="1698602132463" duration="853000" />
+      <workItem from="1698603030153" duration="8535000" />
     </task>
     <task id="LOCAL-00001" summary="menu de edição">
       <option name="closed" value="true" />
@@ -115,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="menu de edição" />
     <MESSAGE value="menuEdição update" />
-    <option name="LAST_COMMIT_MESSAGE" value="menuEdição update" />
+    <MESSAGE value="falta só o resto do filtro." />
+    <option name="LAST_COMMIT_MESSAGE" value="falta só o resto do filtro." />
   </component>
 </project>

@@ -71,7 +71,7 @@ public class Contato {
         return aniversario;
     }
 
-    public void setAniversario(Date aniversario) {
+    public void setAniversario(String aniversario) {
         this.aniversario = String.valueOf(aniversario);
     }
 

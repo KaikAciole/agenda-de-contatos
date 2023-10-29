@@ -85,14 +85,14 @@ public class Agenda {
         }
     }
 
-//    public void setAniversario(String nome, String x){
-//        for (Contato contato : contatos) {
-//            if(contato.getNome().equalsIgnoreCase(nome)){
-//                contato.setAniversario(x);
-//                break;
-//            }
-//        }
-//    }
+    public void setAniversario(String nome, String x){
+        for (Contato contato : contatos) {
+            if(contato.getNome().equalsIgnoreCase(nome)){
+                contato.setAniversario(x);
+                break;
+            }
+        }
+    }
 
     public void setEndereco(String nome,  String endereco){
         for (Contato contato : contatos) {
