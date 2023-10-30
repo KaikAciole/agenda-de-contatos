@@ -16,7 +16,7 @@ public class AgendaMain {
 
     private static String menu(Scanner scanner) {
         System.out.print(
-                "MENU\n" +
+                "\nMENU\n" +
                         "(A)Adicionar Contato\n" +
                         "(B)Listar Contatos\n" +
                         "(C)Exibir Contato\n" +
@@ -83,7 +83,6 @@ public class AgendaMain {
         String nome = scanner.next();
         System.out.println("Detalhes de " + nome);
         System.out.print(agenda.exibirContato(nome));
-        //settar metodos não obrigatorios aqui
     }
 
     private static void removerContato(Agenda agenda, Scanner scanner) {
@@ -97,13 +96,20 @@ public class AgendaMain {
         System.out.println("Qual tipo de contato deseja filtrar: ");
         System.out.print("'A'-Tipo de relacionamento 'B'-Chamada de video: ");
         String opcao = scanner.next().toUpperCase();
-        if (opcao.equalsIgnoreCase("A")) {
+        if(opcao.equalsIgnoreCase("A")){
             System.out.println("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
             String relacionamento = scanner.next().toUpperCase();
             System.out.println(agenda.filtrarRelacionamento(Relacionamento.valueOf(relacionamento)));
-
         } else if (opcao.equalsIgnoreCase("B")) {
-            System.out.println(agenda.filtrarChamadaDeVideo());
+            String redeSocial = "A";
+            String redeSocial2 = "B";
+
+            if (!(RedeSocial.valueOf(redeSocial).equals(redeSocial)) ) {
+                System.out.println(agenda.filtrarChamadaDeVideo(RedeSocial.valueOf(redeSocial)));
+
+            }if(!(RedeSocial.valueOf(redeSocial2).equals(redeSocial2))){
+                System.out.println(agenda.filtrarChamadaDeVideo(RedeSocial.valueOf(redeSocial2)));
+            }
         }
     }
 

@@ -116,12 +116,14 @@ public class Agenda {
         return out.toString();
     }
 
-    public String filtrarChamadaDeVideo(){
+    public String filtrarChamadaDeVideo(RedeSocial redeSocial){
         StringBuffer out = new StringBuffer();
 
-        for (Contato x : contatos) {
-            if(x.getRedeSocial().toString().equals(RedeSocial.A.toString()) || x.getRedeSocial().toString().equals(RedeSocial.B.toString())){
-                out.append(x.getNome() + " " + x.getSobrenome() + ": \uD83C\uDFA5 " + x.getNumero() + "\n-------------------\n");
+        for (Contato contato : contatos) {
+            if (contato.getRedeSocial() != null) {
+                if ((contato.getRedeSocial().toString().equals(redeSocial.toString()))) {
+                    out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n" + contato.redeSocial + " - faz chamada de vídeo" + "\n-------------------");
+                }
             }
         }
         return out.toString();
