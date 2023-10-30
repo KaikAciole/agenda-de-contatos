@@ -81,6 +81,20 @@ public class AgendaMain {
         System.out.print(agenda.removerContato(nome));
     }
 
+    private static void filtrar(Agenda agenda, Scanner scanner) {
+        System.out.println("Qual tipo de contato deseja filtrar: ");
+        System.out.print("'A'-Tipo de relacionamento 'B'-Chamada de video: ");
+        String opcao = scanner.next().toUpperCase();
+        if (opcao.equalsIgnoreCase("A")) {
+            System.out.println("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
+            String relacionamento = scanner.next().toUpperCase();
+            System.out.println(agenda.filtrar(Relacionamento.valueOf(relacionamento)));
+
+        } else if (opcao.equalsIgnoreCase("B")) {
+            //Ainda tem que implementar
+        }
+    }
+
     private static void editar (Agenda agenda, Scanner scanner) {
         System.out.println("Digite o nome do contato você quer editar: ");
         String nome = scanner.next();

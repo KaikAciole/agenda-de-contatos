@@ -103,6 +103,20 @@ public class Agenda {
         }
     }
 
+    public String filtrar(Relacionamento relacionamento) {
+        StringBuffer out = new StringBuffer();
+
+        for (Contato contato : contatos) {
+            if (contato.getRelacionamento() != null) {
+                if ((contato.getRelacionamento().toString().equals(relacionamento.toString()))) {
+                    out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n" + contato.relacionamento + "\n-------------------\n");
+                }
+            }
+        }
+
+        return out.toString();
+    }
+
     public void exportaContatos() throws IOException {
         OutputStream fos = new FileOutputStream("agenda.csv");
         Writer osw = new OutputStreamWriter(fos);
