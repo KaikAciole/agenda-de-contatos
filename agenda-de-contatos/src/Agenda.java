@@ -14,7 +14,7 @@ public class Agenda {
         contatos.add(contato);
     }
 
-    public String listaContatos() {
+    public String listarContatos() {
         StringBuffer out = new StringBuffer();
 
         for (Contato x : contatos) {
@@ -31,13 +31,12 @@ public class Agenda {
         }
         return "Não informado";
     }
-    public boolean removerContato(String nome){
+    public void removerContato(String nome){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
-                return contatos.remove(contato);
+                contatos.remove(contato);
             }
         }
-        return false;
     }
 
     public void setNome(String nome, String nomeMudado){
@@ -103,7 +102,7 @@ public class Agenda {
         }
     }
 
-    public String filtrar(Relacionamento relacionamento) {
+    public String filtrarRelacionamento(Relacionamento relacionamento) {
         StringBuffer out = new StringBuffer();
 
         for (Contato contato : contatos) {
@@ -117,12 +116,23 @@ public class Agenda {
         return out.toString();
     }
 
+    public String filtrarChamadaDeVideo(){
+        StringBuffer out = new StringBuffer();
+
+        for (Contato x : contatos) {
+            if(x.getRedeSocial().toString().equals(RedeSocial.A.toString()) || x.getRedeSocial().toString().equals(RedeSocial.B.toString())){
+                out.append(x.getNome() + " " + x.getSobrenome() + ": \uD83C\uDFA5 " + x.getNumero() + "\n-------------------\n");
+            }
+        }
+        return out.toString();
+    }
+
     public void exportaContatos() throws IOException {
         OutputStream fos = new FileOutputStream("agenda.csv");
         Writer osw = new OutputStreamWriter(fos);
         BufferedWriter bw = new BufferedWriter(osw);
 
-        bw.write("Nome;Sobrenome;Numero;Relacionamento;Endereço;Aniversario;Rede social");
+        bw.write("Nome;Sobrenome;Numero;Relacionamento;Endereço;Aniversario;RedeSocial");
 
         for (Contato contato : contatos) {
 

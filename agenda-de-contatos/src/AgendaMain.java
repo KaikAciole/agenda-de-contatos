@@ -16,32 +16,44 @@ public class AgendaMain {
 
     private static String menu(Scanner scanner) {
         System.out.print(
-                """
-
-                        MENU
-                        (A)Adicionar Contato
-                        (B)listar Contatos
-                        (C)exibir Contato
-                        (D)remover Contato
-                        (E)Exportar CSV
-                        (F)Editar Contato
-                        (G)Filtrar
-                        (H)sair
-
-                        Opção:\s""");
+                "MENU\n" +
+                        "(A)Adicionar Contato\n" +
+                        "(B)Listar Contatos\n" +
+                        "(C)Exibir Contato\n" +
+                        "(D)Remover Contato\n" +
+                        "(E)Exportar CSV\n" +
+                        "(F)Editar Contato\n"+
+                        "(G)Filtrar\n"+
+                        "\n"+
+                        "Opção: ");
         return scanner.next().toUpperCase();
     }
 
     private static void comando(String opcao, Agenda agenda, Scanner scanner) throws IOException {
         switch (opcao) {
-            case "A" -> adicionarContato(agenda, scanner);
-            case "B" -> listaContatos(agenda);
-            case "C" -> exibirContato(agenda, scanner);
-            case "D" -> removerContato(agenda, scanner);
-            case "E" -> exportaContatos(agenda);
-            case "F" -> editar(agenda, scanner);
-            case "G" -> filtrar(agenda, scanner);
-            default -> System.out.println("Opção inválida!");
+            case "A":
+                adicionarContato(agenda, scanner);
+                break;
+            case "B":
+                listarContatos(agenda);
+                break;
+            case "C":
+                exibirContato(agenda, scanner);
+                break;
+            case "D":
+                removerContato(agenda, scanner);
+                break;
+            case "E":
+                exportaContatos(agenda);
+                break;
+            case "F":
+                editar(agenda, scanner);
+                break;
+            case "G":
+                filtrar(agenda, scanner);
+                break;
+            default:
+                System.out.println("Opção inválida!");
         }
     }
 
@@ -57,8 +69,8 @@ public class AgendaMain {
         System.out.println("CONTATO ADICIONADO ✅");
     }
 
-    private static void listaContatos(Agenda agenda) {
-        System.out.println(agenda.listaContatos());
+    private static void listarContatos(Agenda agenda) {
+        System.out.println(agenda.listarContatos());
     }
 
     private static void exportaContatos(Agenda agenda) throws IOException {
@@ -78,7 +90,7 @@ public class AgendaMain {
         System.out.print("Qual contato: ");
         String nome = scanner.next();
         System.out.println("Contato " + nome + " removido com sucesso!");
-        System.out.print(agenda.removerContato(nome));
+        agenda.removerContato(nome);
     }
 
     private static void filtrar(Agenda agenda, Scanner scanner) {
@@ -88,10 +100,10 @@ public class AgendaMain {
         if (opcao.equalsIgnoreCase("A")) {
             System.out.println("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
             String relacionamento = scanner.next().toUpperCase();
-            System.out.println(agenda.filtrar(Relacionamento.valueOf(relacionamento)));
+            System.out.println(agenda.filtrarRelacionamento(Relacionamento.valueOf(relacionamento)));
 
         } else if (opcao.equalsIgnoreCase("B")) {
-            //Ainda tem que implementar
+            System.out.println(agenda.filtrarChamadaDeVideo());
         }
     }
 
@@ -125,14 +137,14 @@ public class AgendaMain {
                 agenda.setAniversario(nome, data);
 
             } else if (opc.equalsIgnoreCase("E")) {
-                System.out.println("Adicione ou mude o endereço: (Exemplo: 'R.Francisco_Bezerra_n°54'): ");
+                System.out.println("Adicione ou mude o endereço: ");
                 scanner.nextLine();
                 String endereco = scanner.nextLine();
                 agenda.setEndereco(nome, endereco);
 
             } else if (opc.equalsIgnoreCase("F")) {
                 System.out.println("Qual tipo de relacionamento você que definir a este contato: ");
-                System.out.print("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
+                System.out.print("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: \n");
                 String relacionamento = scanner.next().toUpperCase();
                 agenda.setRelacionamento(nome, Relacionamento.valueOf(relacionamento));
 

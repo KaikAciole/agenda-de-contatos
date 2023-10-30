@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="falta só o resto do filtro." />
-    <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="" />
-    <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="Changes by Ramon">
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="deu ruim">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
     </list>
+    <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="" />
+    <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="Changes by Ramon" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,12 +44,15 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Ramom/ExercicioPoo/agendaDeContatos-ramonteste",
+    "last_opened_file_path": "C:/Development/pooJef/agendaDeContatos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.18850575",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -124,6 +129,7 @@
     <MESSAGE value="menuEdição update" />
     <MESSAGE value="falta só o resto do filtro." />
     <MESSAGE value="Changes by Ramon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Ramon" />
+    <MESSAGE value="deu ruim" />
+    <option name="LAST_COMMIT_MESSAGE" value="deu ruim" />
   </component>
 </project>
