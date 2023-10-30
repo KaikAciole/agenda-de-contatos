@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Agenda {
 
-    private ArrayList<Contato> contatos;
+    private final ArrayList<Contato> contatos;
 
     public Agenda() {
         contatos = new ArrayList<>();

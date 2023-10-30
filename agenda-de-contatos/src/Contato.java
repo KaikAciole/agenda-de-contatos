@@ -15,7 +15,6 @@ public class Contato {
         this.numero = numero;
     }
 
-
     public Contato(String nome, String sobrenome, String numero, Relacionamento relacionamento) {
         this(nome, sobrenome, numero);
         this.relacionamento = relacionamento;
@@ -25,7 +24,6 @@ public class Contato {
         this(nome, sobrenome, numero, relacionamento);
 
     }
-
 
     public String getNome() {
         return nome;
@@ -82,7 +80,6 @@ public class Contato {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
 
     @Override
     public String toString() {
