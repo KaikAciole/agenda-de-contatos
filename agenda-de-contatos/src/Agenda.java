@@ -29,7 +29,7 @@ public class Agenda {
                 return contato;
             }
         }
-        return "Não informado";
+        return null;
     }
 
     public void removerContato(String nome){
@@ -76,10 +76,10 @@ public class Agenda {
         }
     }
 
-    public void setRedeSocial(String nome, RedeSocial x){
+    public void setRedeSocial(String nome, RedeSocial redeSocial){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setRedeSocial(x);
+                contato.setRedeSocial(redeSocial);
                 break;
             }
         }
