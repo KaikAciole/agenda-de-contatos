@@ -11,6 +11,7 @@ public enum Relacionamento {
     Relacionamento(String nome) {
         this.nome = nome;
     }
+
     public String toString(){
         return this.nome;
     }

@@ -105,16 +105,8 @@ public class AgendaMain {
             System.out.println(agenda.filtrarRelacionamento(Relacionamento.valueOf(relacionamento)));
 
         } else if (opcao.equalsIgnoreCase("B")) {
-            String redeSocial = "A";
-            String redeSocial2 = "B";
-
-            if (!(RedeSocial.valueOf(redeSocial).equals(redeSocial)) ) {
-                System.out.println(agenda.filtrarChamadaDeVideo(RedeSocial.valueOf(redeSocial)));
-
-            }if(!(RedeSocial.valueOf(redeSocial2).equals(redeSocial2))){
-                System.out.println(agenda.filtrarChamadaDeVideo(RedeSocial.valueOf(redeSocial2)));
-            }
-        }
+            System.out.println(agenda.filtrarChamadaDeVideo());
+    }
     }
 
     private static void editar (Agenda agenda, Scanner scanner) {

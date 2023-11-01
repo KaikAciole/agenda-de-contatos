@@ -17,8 +17,8 @@ public class Agenda {
     public String listarContatos() {
         StringBuffer out = new StringBuffer();
 
-        for (Contato x : contatos) {
-            out.append(x.getNome() + " " + x.getSobrenome() + ": \n\uD83D\uDCDE " + x.getNumero() + "\n-------------------\n");
+        for (Contato contato : contatos) {
+            out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n-------------------\n");
         }
         return out.toString();
     }
@@ -31,6 +31,7 @@ public class Agenda {
         }
         return "Não informado";
     }
+
     public void removerContato(String nome){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
@@ -66,10 +67,10 @@ public class Agenda {
         }
     }
 
-    public void setRelacionamento(String nome, Relacionamento x){
+    public void setRelacionamento(String nome, Relacionamento relacionamento){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setRelacionamento(x);
+                contato.setRelacionamento(relacionamento);
                 break;
             }
         }
@@ -84,10 +85,10 @@ public class Agenda {
         }
     }
 
-    public void setAniversario(String nome, String x){
+    public void setAniversario(String nome, String aniversario){
         for (Contato contato : contatos) {
             if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setAniversario(x);
+                contato.setAniversario(aniversario);
                 break;
             }
         }
@@ -116,14 +117,12 @@ public class Agenda {
         return out.toString();
     }
 
-    public String filtrarChamadaDeVideo(RedeSocial redeSocial){
+    public String filtrarChamadaDeVideo(){
         StringBuffer out = new StringBuffer();
 
         for (Contato contato : contatos) {
-            if (contato.getRedeSocial() != null) {
-                if ((contato.getRedeSocial().toString().equals(redeSocial.toString()))) {
-                    out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n" + contato.redeSocial + " - faz chamada de vídeo" + "\n-------------------");
-                }
+            if (contato.getRedeSocial() != RedeSocial.TELEFONE) {
+                out.append("\n" + contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n" + contato.redeSocial + " - faz chamada de vídeo" + "\n-------------------");
             }
         }
         return out.toString();
