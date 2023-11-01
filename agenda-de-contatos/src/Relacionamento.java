@@ -1,10 +1,9 @@
 public enum Relacionamento {
-    A("Colega"),
-    B("Família"),
-    C("Amigo"),
-    D("Inimigo"),
-    E("Emergência"),
-    Notinfo("❌ Não informado");
+    COLEGA("Colega"),
+    FAMILIA("Família"),
+    AMIGO("Amigo"),
+    INIMIGO("Inimigo"),
+    EMERGENCIA("Emergência");
 
 
     private final String nome;

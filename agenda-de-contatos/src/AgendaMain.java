@@ -7,7 +7,7 @@ public class AgendaMain {
         Agenda agenda = new Agenda();
 
         Scanner scanner = new Scanner(System.in);
-        String escolha = menu(scanner);
+        String escolha = " ";
         while (!escolha.equals("H")) {
             escolha = menu(scanner);
             comando(escolha, agenda, scanner);
@@ -103,6 +103,7 @@ public class AgendaMain {
             System.out.println("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: ");
             String relacionamento = scanner.next().toUpperCase();
             System.out.println(agenda.filtrarRelacionamento(Relacionamento.valueOf(relacionamento)));
+
         } else if (opcao.equalsIgnoreCase("B")) {
             String redeSocial = "A";
             String redeSocial2 = "B";
@@ -155,13 +156,30 @@ public class AgendaMain {
                 System.out.println("Qual tipo de relacionamento você que definir a este contato: ");
                 System.out.print("'A'-Colega, 'B'-Familia, 'C'-Amigo, 'D'-Inimigo, 'E'-Emergência: \n");
                 String relacionamento = scanner.next().toUpperCase();
-                agenda.setRelacionamento(nome, Relacionamento.valueOf(relacionamento));
+                if(relacionamento.equalsIgnoreCase("a")){
+                    agenda.setRelacionamento(nome, Relacionamento.COLEGA);
+                } else if (relacionamento.equalsIgnoreCase("b")) {
+                    agenda.setRelacionamento(nome, Relacionamento.FAMILIA);
+                }else if (relacionamento.equalsIgnoreCase("c")) {
+                    agenda.setRelacionamento(nome, Relacionamento.AMIGO);
+                }else if (relacionamento.equalsIgnoreCase("d")) {
+                    agenda.setRelacionamento(nome, Relacionamento.INIMIGO);
+                }else if (relacionamento.equalsIgnoreCase("e")) {
+                    agenda.setRelacionamento(nome, Relacionamento.EMERGENCIA);
+                }
 
             } else if (opc.equalsIgnoreCase("G")) {
                 System.out.println("Qual rede social quer definir ao contato:  ");
                 System.out.println("'A'-Whatsapp, 'B'-Telegram, 'C'-Telefone: ");
                 String redeSocial = scanner.next().toUpperCase();
-                agenda.setRedeSocial(nome, RedeSocial.valueOf(redeSocial));
+                if (redeSocial.equalsIgnoreCase("a")){
+                    agenda.setRedeSocial(nome, RedeSocial.WHATSAPP);
+                }else if(redeSocial.equalsIgnoreCase("b")){
+                    agenda.setRedeSocial(nome, RedeSocial.TELEGRAM);
+                }else if(redeSocial.equalsIgnoreCase("c")){
+                    agenda.setRedeSocial(nome, RedeSocial.TELEFONE);
+                }
+
             }
             System.out.println("Deseja continuar editando? S/N");
             String opcao = scanner.next();

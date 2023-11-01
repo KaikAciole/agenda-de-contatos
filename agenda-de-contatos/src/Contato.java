@@ -83,18 +83,6 @@ public class Contato {
 
     @Override
     public String toString() {
-        if(relacionamento == null){
-            relacionamento = Relacionamento.valueOf(("Notinfo"));
-        }
-        if(redeSocial == null){
-            redeSocial = RedeSocial.valueOf(("Ninfo"));
-        }
-        if(aniversario == null){
-            aniversario = "❌ Não informado";
-        }
-        if(endereco == null){
-            endereco = "❌ Não informado";
-        }
         return "-------------------------" + "\n" +
                 "nome: " + nome + "\n" +
                 "sobrenome: " + sobrenome + "\n" +

@@ -23,10 +23,10 @@ public class Agenda {
         return out.toString();
     }
 
-    public String exibirContato(String nome){
+    public Contato exibirContato(String nome){
         for (Contato contato : contatos) {
             if (contato.getNome().equalsIgnoreCase(nome)){
-                return contato.toString();
+                return contato;
             }
         }
         return "Não informado";
@@ -102,12 +102,12 @@ public class Agenda {
         }
     }
 
-    public String filtrarRelacionamento(Relacionamento relacionamento) {
+    public String filtrarRelacionamento(Relacionamento relacionamento2) {
         StringBuffer out = new StringBuffer();
 
         for (Contato contato : contatos) {
             if (contato.getRelacionamento() != null) {
-                if ((contato.getRelacionamento().toString().equals(relacionamento.toString()))) {
+                if ((contato.getRelacionamento().toString().equals(relacionamento2.toString()))) {
                     out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n" + contato.relacionamento + "\n-------------------\n");
                 }
             }
