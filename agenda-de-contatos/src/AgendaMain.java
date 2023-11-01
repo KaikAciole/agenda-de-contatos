@@ -7,8 +7,8 @@ public class AgendaMain {
         Agenda agenda = new Agenda();
 
         Scanner scanner = new Scanner(System.in);
-        String escolha;
-        while (true) {
+        String escolha = menu(scanner);
+        while (!escolha.equals("H")) {
             escolha = menu(scanner);
             comando(escolha, agenda, scanner);
         }
@@ -23,7 +23,8 @@ public class AgendaMain {
                         "(D)Remover Contato\n" +
                         "(E)Exportar CSV\n" +
                         "(F)Editar Contato\n"+
-                        "(G)Filtrar\n"+
+                        "(G)Filtrar\n" +
+                        "(H)Sair\n"+
                         "\n"+
                         "Opção: ");
         return scanner.next().toUpperCase();
@@ -51,6 +52,8 @@ public class AgendaMain {
                 break;
             case "G":
                 filtrar(agenda, scanner);
+                break;
+            case "H":
                 break;
             default:
                 System.out.println("Opção inválida!");

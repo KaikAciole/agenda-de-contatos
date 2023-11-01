@@ -5,7 +5,7 @@ public class Contato {
     private String sobrenome;
     private String numero;
     Relacionamento relacionamento;
-    RedeSocial redeSocial;
+    RedeSocial redeSocial = RedeSocial.C;
     private String aniversario;
     private String endereco;
 
