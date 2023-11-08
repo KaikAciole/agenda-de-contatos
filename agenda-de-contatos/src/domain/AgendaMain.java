@@ -1,3 +1,5 @@
+package domain;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -77,7 +79,7 @@ public class AgendaMain {
     }
 
     private static void exportaContatos(Agenda agenda) throws IOException {
-        agenda.exportaContatos();
+        //agenda.exportaContatos();
         System.out.println("Contatos exportados ✅");
     }
 
@@ -91,7 +93,7 @@ public class AgendaMain {
     private static void removerContato(Agenda agenda, Scanner scanner) {
         System.out.print("Qual contato: ");
         String nome = scanner.next();
-        System.out.println("Contato " + nome + " removido com sucesso!");
+        System.out.println("Domain.Contato " + nome + " removido com sucesso!");
         agenda.removerContato(nome);
     }
 
@@ -114,7 +116,7 @@ public class AgendaMain {
         String nome = scanner.next();
 
         while (true) {
-            System.out.println("O que você quer editar: 'A'-Nome 'B'-Sobrenome 'C'-Numero 'D'-Aniversário 'E'-Endereço 'F'-Relacionamento 'G'-Rede Social");
+            System.out.println("O que você quer editar: 'A'-Nome 'B'-Sobrenome 'C'-Numero 'D'-Aniversário 'E'-Endereço 'F'-Domain.Relacionamento 'G'-Rede Social");
             String opc = scanner.next();
 
             if (opc.equalsIgnoreCase("A")) {

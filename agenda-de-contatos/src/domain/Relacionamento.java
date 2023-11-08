@@ -1,9 +1,12 @@
+package domain;
+
 public enum Relacionamento {
     COLEGA("Colega"),
     FAMILIA("Família"),
     AMIGO("Amigo"),
     INIMIGO("Inimigo"),
-    EMERGENCIA("Emergência");
+    EMERGENCIA("Emergência"),
+    INDEFINIDO("Indefinido");
 
 
     private final String nome;

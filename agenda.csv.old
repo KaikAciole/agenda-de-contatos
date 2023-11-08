@@ -1,5 +1,5 @@
 Nome;Sobrenome;Numero;Relacionamento;Endereço;Aniversario;RedeSocial
 tony;days;187263872;❌ Não informado;❌ Não informado;❌ Não informado;Telefone
 kaik;aciole;874817219873;Inimigo;ruazinha de casa n 12;12/12/1986;Whatsapp
-jeferson;freire;40028922;null;null;null;Telefone
-ramon;bento;66477392;Inimigo;null;null;Whatsapp
+jeferson;freire;40028922;;null;null;Telefone
+ramon;bento;66477392;Inimigo;;;Whatsapp

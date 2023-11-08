@@ -1,3 +1,5 @@
+package domain;
+
 public enum RedeSocial {
     WHATSAPP("Whatsapp"),
     TELEGRAM("Telegram"),

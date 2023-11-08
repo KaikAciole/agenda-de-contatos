@@ -1,18 +1,19 @@
-import java.util.Date;
+package domain;
 
 public class Contato {
     private String nome;
     private String sobrenome;
     private String numero;
-    Relacionamento relacionamento;
+    Relacionamento relacionamento = Relacionamento.INDEFINIDO;
     RedeSocial redeSocial = RedeSocial.TELEFONE;
     private String aniversario;
-    private String endereco;
+    private String endereco = "";
 
     public Contato(String nome, String sobrenome, String numero) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.numero = numero;
+
     }
 
     public Contato(String nome, String sobrenome, String numero, Relacionamento relacionamento) {
