@@ -40,8 +40,8 @@ public class ContatoRepository {
         return dataService.search(termo);
     }
 
-    public boolean exists(String cpf) {
-        return dataService.exists(cpf);
+    public boolean exists(String num) {
+        return dataService.exists(num);
     }
 
     public void remove(Contato p) {

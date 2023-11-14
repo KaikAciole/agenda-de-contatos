@@ -4,23 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="melhor">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/CSVDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/service/ContatoService.java" afterDir="false" />
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="Aplicação padrão de projeto.">
+      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/DateValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/NumeroValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/AgendaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Contato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/RedeSocial.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/RedeSocial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Relacionamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Relacionamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/service/ContatoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/service/ContatoService.java" afterDir="false" />
     </list>
-    <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />
-    <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="Changes by Ramon" />
+    <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot">
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" afterDir="false" />
+    </list>
+    <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="Changes by Ramon">
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +40,17 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java">
+      <ranges>
+        <range start1="5" end1="7" start2="5" end2="5" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="10" end1="11" start2="8" end2="8" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="118" end1="119" start2="115" end2="117" changelist="0da335a2-c9be-4e6f-8e80-473a07198cca" />
+        <range start1="129" end1="129" start2="127" end2="128" changelist="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" />
+        <range start1="136" end1="138" start2="135" end2="135" changelist="0da335a2-c9be-4e6f-8e80-473a07198cca" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -106,6 +116,8 @@
       <workItem from="1698797424237" duration="8016000" />
       <workItem from="1699289612637" duration="6159000" />
       <workItem from="1699446103036" duration="7686000" />
+      <workItem from="1699464697052" duration="919000" />
+      <workItem from="1699987727183" duration="5852000" />
     </task>
     <task id="LOCAL-00001" summary="menu de edição">
       <option name="closed" value="true" />
@@ -171,7 +183,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698806989426</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Aplicação padrão de projeto.">
+      <option name="closed" value="true" />
+      <created>1699466839650</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699466839650</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Aplicação padrão de projeto.">
+      <option name="closed" value="true" />
+      <created>1699466859519</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699466859519</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +224,7 @@
     <MESSAGE value="melhor" />
     <MESSAGE value="Changes by Jef-Bot" />
     <MESSAGE value="Changes by Ramon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Ramon" />
+    <MESSAGE value="Aplicação padrão de projeto." />
+    <option name="LAST_COMMIT_MESSAGE" value="Aplicação padrão de projeto." />
   </component>
 </project>
