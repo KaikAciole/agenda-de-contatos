@@ -17,13 +17,14 @@ public class CSVDataService extends InMemoryDataService {
                 BufferedReader bufReader = new BufferedReader(reader);
                 String line = null;
 
+                bufReader.readLine();
                 while ((line = bufReader.readLine()) != null) {
                     String[] data = line.split(";");
                     Contato c = new Contato(data[0], data[1], data[2]);
-                    c.setRelacionamento(Relacionamento.valueOf(data[3]));
+                    c.setRelacionamento(Relacionamento.valueOf(data[3].toUpperCase()));
                     c.setEndereco(data[4]);
                     c.setAniversario(data[5]);
-                    c.setRedeSocial(RedeSocial.valueOf(data[6]));
+                    c.setRedeSocial(RedeSocial.valueOf(data[6].toUpperCase()));
                 }
             } catch (IOException e) {
                 e.printStackTrace();
