@@ -28,8 +28,8 @@ public class InMemoryDataService implements ContatoDataService {
     }
 
     @Override
-    public boolean exists(String nome) {
-        return contatos.stream().anyMatch(p -> p.getNome().equals(nome));
+    public boolean exists(String numero) {
+        return contatos.stream().anyMatch(c -> c.getNumero().equals(numero));
     }
 
     @Override

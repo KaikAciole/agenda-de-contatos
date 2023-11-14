@@ -3,12 +3,9 @@ package domain;
 import repository.CSVDataService;
 import repository.ContatoRepository;
 
-import java.io.*;
-import java.util.ArrayList;
 
 public class Agenda {
 
-    //private final ArrayList<Contato> contatos;
     private ContatoRepository repository;
 
     public Agenda() {
@@ -126,6 +123,7 @@ public class Agenda {
 
     public String filtrarChamadaDeVideo(){
         StringBuffer out = new StringBuffer();
+
 
         for (Contato contato : repository.getAll()) {
             if (contato.getRedeSocial() != RedeSocial.TELEFONE) {
