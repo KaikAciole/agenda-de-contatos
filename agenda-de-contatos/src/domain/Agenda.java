@@ -113,7 +113,8 @@ public class Agenda {
         for (Contato contato : repository.getAll()) {
             if (contato.getRelacionamento() != null) {
                 if ((contato.getRelacionamento().toString().equals(relacionamento2.toString()))) {
-                    out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n" + contato.relacionamento + "\n-------------------\n");
+                    out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() +
+                            "\n" + contato.relacionamento + "\n-------------------\n");
                 }
             }
         }
@@ -132,6 +133,4 @@ public class Agenda {
         }
         return out.toString();
     }
-
-
 }
