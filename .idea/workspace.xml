@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="Aplicação padrão de projeto.">
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="seja o que o bigbang quiser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" afterDir="false" />
     </list>
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />
     <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="Changes by Ramon" />
@@ -52,7 +51,7 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Development/pooJef/sistema-medico",
+    "last_opened_file_path": "C:/Development/pooJef/agendaDeContatos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -179,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699466859519</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="seja o que o bigbang quiser">
+      <option name="closed" value="true" />
+      <created>1700071529386</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700071529386</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +212,7 @@
     <MESSAGE value="Changes by Jef-Bot" />
     <MESSAGE value="Changes by Ramon" />
     <MESSAGE value="Aplicação padrão de projeto." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aplicação padrão de projeto." />
+    <MESSAGE value="seja o que o bigbang quiser" />
+    <option name="LAST_COMMIT_MESSAGE" value="seja o que o bigbang quiser" />
   </component>
 </project>

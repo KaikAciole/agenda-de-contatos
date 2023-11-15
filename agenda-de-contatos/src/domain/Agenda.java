@@ -75,5 +75,6 @@ public class Agenda {
     public List<Contato> filtrarChamadaDeVideo(){
         List<Contato> telegram = (List<Contato>) repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM));
         List<Contato> whatsapp = (List<Contato>) repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM));
+        return telegram.addAll(whatsapp, Contato) + whatsapp;
 
 }}
