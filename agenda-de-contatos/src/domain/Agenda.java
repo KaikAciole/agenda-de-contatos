@@ -3,6 +3,8 @@ package domain;
 import repository.CSVDataService;
 import repository.ContatoRepository;
 
+import java.util.List;
+
 
 public class Agenda {
 
@@ -18,119 +20,60 @@ public class Agenda {
         repository.add(contato);
     }
 
-    public String listarContatos() {
-        StringBuffer out = new StringBuffer();
-
-        for (Contato contato : repository.getAll()) {
-            out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n-------------------\n");
-        }
-        return out.toString();
+    public List<Contato> listarContatos() {
+        return repository.getAll();
     }
 
-    public Contato exibirContato(String nome){
-        for (Contato contato : repository.getAll()) {
-            if (contato.getNome().equalsIgnoreCase(nome)){
-                return contato;
-            }
-        }
-        return null;
+    public List<Contato> exibirContato(String nomeSobrenome){
+        return repository.search(nomeSobrenome);
     }
 
-    public void removerContato(String nome){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                repository.remove(contato);
-            }
-        }
+    public void removerContato(String nomeSobrenome){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        repository.remove(c);
     }
 
-    public void setNome(String nome, String nomeMudado){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setNome(nomeMudado);
-                break;
-            }
-        }
+    public void setNome(String nomeSobrenome, String nomeMudado){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        c.setNome(nomeMudado);
     }
 
-    public void setSobrenome(String nome, String sobrenome){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setSobrenome(sobrenome);
-                break;
-            }
-        }
+    public void setSobrenome(String nomeSobrenome, String sobrenome){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        c.setSobrenome(sobrenome);
     }
 
-    public void setNumero(String nome, String numero){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setNumero(numero);
-                break;
-            }
-        }
+    public void setNumero(String nomeSobrenome, String numero){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        c.setNumero(numero);
     }
 
-    public void setRelacionamento(String nome, Relacionamento relacionamento){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setRelacionamento(relacionamento);
-                break;
-            }
-        }
+    public void setRelacionamento(String nomeSobrenome, Relacionamento relacionamento){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        c.setRelacionamento(relacionamento);
     }
 
-    public void setRedeSocial(String nome, RedeSocial redeSocial){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setRedeSocial(redeSocial);
-                break;
-            }
-        }
+    public void setRedeSocial(String nomeSobrenome, RedeSocial redeSocial){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        c.setRedeSocial(redeSocial);
     }
 
-    public void setAniversario(String nome, String aniversario){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setAniversario(aniversario);
-                break;
-            }
-        }
+    public void setAniversario(String nomeSobrenome, String aniversario){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        c.setAniversario(aniversario);
     }
 
-    public void setEndereco(String nome,  String endereco){
-        for (Contato contato : repository.getAll()) {
-            if(contato.getNome().equalsIgnoreCase(nome)){
-                contato.setEndereco(endereco);
-                break;
-            }
-        }
+    public void setEndereco(String nomeSobrenome, String endereco){
+        Contato c = repository.search(nomeSobrenome).get(0);
+        c.setEndereco(endereco);
     }
 
-    public String filtrarRelacionamento(Relacionamento relacionamento2) {
-        StringBuffer out = new StringBuffer();
-
-        for (Contato contato : repository.getAll()) {
-            if (contato.getRelacionamento() != null) {
-                if ((contato.getRelacionamento().toString().equals(relacionamento2.toString()))) {
-                    out.append(contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() +
-                            "\n" + contato.relacionamento + "\n-------------------\n");
-                }
-            }
-        }
-
-        return out.toString();
+    public List<Contato> filtrarRelacionamento(Relacionamento relacionamento) {
+        return (List<Contato>) repository.getAll().stream().filter(c -> c.getRelacionamento().equals((Relacionamento) relacionamento));
     }
 
-    public String filtrarChamadaDeVideo(){
-        StringBuffer out = new StringBuffer();
+    public List<Contato> filtrarChamadaDeVideo(){
+        List<Contato> telegram = (List<Contato>) repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM));
+        List<Contato> whatsapp = (List<Contato>) repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM));
 
-
-        for (Contato contato : repository.getAll()) {
-            if (contato.getRedeSocial() != RedeSocial.TELEFONE) {
-                out.append("\n" + contato.getNome() + " " + contato.getSobrenome() + ": \n\uD83D\uDCDE " + contato.getNumero() + "\n" + contato.redeSocial + " - faz chamada de vídeo" + "\n-------------------");
-            }
-        }
-        return out.toString();
-    }
-}
+}}
