@@ -24,7 +24,7 @@ public class InMemoryDataService implements ContatoDataService {
 
     @Override
     public List<Contato> search(String termo) {
-        return (List<Contato>) contatos.stream().filter(c -> (c.getNome() + c.getSobrenome()).toLowerCase().contains(termo.toLowerCase()));
+        return contatos.stream().filter(c -> (c.getNome() + c.getSobrenome()).toLowerCase().contains(termo.toLowerCase())).toList();
     }
 
     @Override

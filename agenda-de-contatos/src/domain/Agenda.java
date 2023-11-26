@@ -69,12 +69,11 @@ public class Agenda {
     }
 
     public List<Contato> filtrarRelacionamento(Relacionamento relacionamento) {
-        return (List<Contato>) repository.getAll().stream().filter(c -> c.getRelacionamento().equals((Relacionamento) relacionamento));
+        return repository.getAll().stream().filter(c -> c.getRelacionamento().equals((Relacionamento) relacionamento)).toList();
     }
 
     public List<Contato> filtrarChamadaDeVideo(){
-        List<Contato> telegram = (List<Contato>) repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM));
-        List<Contato> whatsapp = (List<Contato>) repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM));
-        return telegram.addAll(whatsapp, Contato) + whatsapp;
+        return repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM) ||
+                c.getRedeSocial().equals(RedeSocial.WHATSAPP)).toList();
 
 }}
