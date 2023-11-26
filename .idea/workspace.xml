@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="seja o que o bigbang quizeeeeeeerrrrrr">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/AgendaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
-    </list>
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="moozovo atualizado" />
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />
     <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="Changes by Ramon" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +95,7 @@
       <workItem from="1699464697052" duration="919000" />
       <workItem from="1699987727183" duration="5852000" />
       <workItem from="1700499247143" duration="7122000" />
+      <workItem from="1701016998249" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="menu de edição">
       <option name="closed" value="true" />
@@ -199,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700086461484</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="moozovo atualizado">
+      <option name="closed" value="true" />
+      <created>1701017465887</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701017465888</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +229,7 @@
     <MESSAGE value="Aplicação padrão de projeto." />
     <MESSAGE value="seja o que o bigbang quiser" />
     <MESSAGE value="seja o que o bigbang quizeeeeeeerrrrrr" />
-    <option name="LAST_COMMIT_MESSAGE" value="seja o que o bigbang quizeeeeeeerrrrrr" />
+    <MESSAGE value="moozovo atualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="moozovo atualizado" />
   </component>
 </project>
