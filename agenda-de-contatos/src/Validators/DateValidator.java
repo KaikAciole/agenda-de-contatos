@@ -2,7 +2,7 @@ package Validators;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class DateValidator implements Validator<String> {
+public class DateValidator extends Validator<String> {
     @Override
     public boolean validate(String data) {
         try {

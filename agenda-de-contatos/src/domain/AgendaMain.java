@@ -1,5 +1,8 @@
 package domain;
 
+import Validators.NumberValidator;
+import Validators.Validator;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -63,12 +66,14 @@ public class AgendaMain {
     }
 
     private static void adicionarContato(Agenda agenda, Scanner scanner) {
+        Validator<String> validator = new NumberValidator(true);
+
         System.out.print("Nome: ");
         String nome = scanner.next();
         System.out.print("Sobrenome: ");
         String sobrenome = scanner.next();
-        System.out.print("Número: ");
-        String numero = scanner.next();
+
+        String numero = validator.getValidValue("Número: ", "Número inválido ou já cadastrado (formato: (xx)xxxxx-xxxx", String.class);
 
         agenda.adicionaContato(nome, sobrenome, numero);
         System.out.println("CONTATO ADICIONADO ✅");
@@ -110,7 +115,7 @@ public class AgendaMain {
 
         } else if (opcao.equalsIgnoreCase("B")) {
             System.out.println(agenda.filtrarChamadaDeVideo());
-    }
+        }
     }
 
     private static void editar (Agenda agenda, Scanner scanner) {

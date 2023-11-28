@@ -4,15 +4,29 @@ import repository.CSVDataService;
 import repository.ContatoRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class Agenda {
 
+    private static Agenda instance;
     private ContatoRepository repository;
 
     public Agenda() {
         repository = ContatoRepository.getInstance();
         repository.setRepository(new CSVDataService());
+    }
+
+    public static Agenda getInstance() {
+        if (instance == null) {
+            instance = new Agenda();
+        }
+
+        return instance;
+    }
+
+    public Contato get(int index) {
+        return repository.getAll().get(index);
     }
 
     public void adicionaContato(String nome, String sobrenome, String numero) {
@@ -31,6 +45,10 @@ public class Agenda {
     public void removerContato(String nomeSobrenome){
         Contato c = repository.search(nomeSobrenome).get(0);
         repository.remove(c);
+    }
+
+    public boolean existe(String numero){
+        return repository.exists(numero);
     }
 
     public void setNome(String nomeSobrenome, String nomeMudado){
@@ -69,11 +87,11 @@ public class Agenda {
     }
 
     public List<Contato> filtrarRelacionamento(Relacionamento relacionamento) {
-        return repository.getAll().stream().filter(c -> c.getRelacionamento().equals((Relacionamento) relacionamento)).toList();
+        return repository.getAll().stream().filter(c -> c.getRelacionamento().equals((Relacionamento) relacionamento)).collect(Collectors.toList());
     }
 
     public List<Contato> filtrarChamadaDeVideo(){
         return repository.getAll().stream().filter(c -> c.getRedeSocial().equals(RedeSocial.TELEGRAM) ||
-                c.getRedeSocial().equals(RedeSocial.WHATSAPP)).toList();
+                c.getRedeSocial().equals(RedeSocial.WHATSAPP)).collect(Collectors.toList());
 
-}}
+    }}

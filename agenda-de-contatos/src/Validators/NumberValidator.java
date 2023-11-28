@@ -1,21 +1,25 @@
-package br.edu.ifpb.validators;
+package Validators;
 
-import java.util.List;
+import domain.Agenda;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class NumberValidator{
-    String numero;
-    public boolean NumberValidator(String numero, List<String> numeros) {
-        this.numero = numero;
-        boolean existeNumero = numeros.contains(numero);
+public class NumberValidator extends Validator<String> {
+    private final Agenda agenda = Agenda.getInstance();
+    private final boolean checkIfExists;
 
-        String cpfPattern = "\\d{2}\s\\d{5}\s\\d{4}";
+    public NumberValidator(boolean checkIfExists) {
+        this.checkIfExists = checkIfExists;
+    }
 
-        // Use the Pattern and Matcher classes to perform the match
-        Pattern pattern = Pattern.compile(cpfPattern);
+    @Override
+    public boolean validate(String numero) {
+        String numeroPattern = "\\(\\d{2}\\)\\d{5}-\\d{4}";
+
+        Pattern pattern = Pattern.compile(numeroPattern);
         Matcher matcher = pattern.matcher(numero);
 
-        return matcher.matches() && !existeNumero;
+        return matcher.matches() && (!checkIfExists || !agenda.existe(numero));
     }
-    }
+}
