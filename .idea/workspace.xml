@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="moozovo atualizado">
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWIndow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/ScreenContato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/ScreenMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/tt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="interface fluindo">
+      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/img/contorno-da-lupa-de-pesquisa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/img/lupa.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/DateValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/DateValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/NumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/NumberValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/AgendaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/AgendaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWIndow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/tt.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
     </list>
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />
@@ -76,7 +70,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.MainWIndow">
+  <component name="RunManager" selected="Application.MainWindow">
     <configuration name="AgendaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="domain.AgendaMain" />
       <module name="agendaDeContatos" />
@@ -125,10 +119,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainWIndow" />
-        <item itemvalue="Application.ScreenMain" />
         <item itemvalue="Application.MainWindow" />
         <item itemvalue="Application.AgendaMain" />
+        <item itemvalue="Application.MainWIndow" />
+        <item itemvalue="Application.ScreenMain" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +147,10 @@
       <workItem from="1699987727183" duration="5852000" />
       <workItem from="1700499247143" duration="7122000" />
       <workItem from="1701016998249" duration="2605000" />
-      <workItem from="1701126710446" duration="14881000" />
+      <workItem from="1701126710446" duration="14984000" />
+      <workItem from="1701263223937" duration="2529000" />
+      <workItem from="1701401637181" duration="1549000" />
+      <workItem from="1701460763384" duration="2904000" />
     </task>
     <task id="LOCAL-00001" summary="menu de edição">
       <option name="closed" value="true" />
@@ -267,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701019882497</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="interface fluindo">
+      <option name="closed" value="true" />
+      <created>1701143263361</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701143263361</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +301,7 @@
     <MESSAGE value="seja o que o bigbang quiser" />
     <MESSAGE value="seja o que o bigbang quizeeeeeeerrrrrr" />
     <MESSAGE value="moozovo atualizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="moozovo atualizado" />
+    <MESSAGE value="interface fluindo" />
+    <option name="LAST_COMMIT_MESSAGE" value="interface fluindo" />
   </component>
 </project>
