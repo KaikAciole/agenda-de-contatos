@@ -14,7 +14,8 @@ public class ContatoRepository {
 
     public static ContatoRepository getInstance() {
         if (instance == null) {
-            instance = new ContatoRepository(new CSVDataService());
+            instance = new ContatoRepository(new InMemoryDataService());
+            CSVDataService.importar();
         }
 
         return instance;

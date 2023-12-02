@@ -141,11 +141,6 @@ public class AddWindow extends JFrame {
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Apagar Tudo");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -171,6 +166,7 @@ public class AddWindow extends JFrame {
         );
 
         jButton1.addActionListener(e -> adicionarContato());
+        jButton2.addActionListener(e -> limparCampos());
 
         jSeparator3.setOrientation(SwingConstants.VERTICAL);
 
@@ -285,7 +281,12 @@ public class AddWindow extends JFrame {
 
             if (validator.validate(numero)) {
                 agenda.adicionaContato(nome, sobrenome, numero);
+                limparCampos();
+
+                // atualiza lista de contatos após adição
                 main.atualizarListaContatos();
+
+                JOptionPane.showMessageDialog(this, "Contato adicionado ✅");
             } else {
                 JOptionPane.showMessageDialog(this, "Número já cadastrado.");
             }
@@ -295,15 +296,13 @@ public class AddWindow extends JFrame {
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
+    private void limparCampos() {
+        jCampoNome.setText("");
+        jCampoSobrenome.setText("");
+        jCampoNumero.setText("");
+    }
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
         try {
             for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -320,9 +319,6 @@ public class AddWindow extends JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(AddWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AddWindow().setVisible(true);

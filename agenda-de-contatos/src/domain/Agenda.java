@@ -1,7 +1,7 @@
 package domain;
 
-import repository.CSVDataService;
 import repository.ContatoRepository;
+import repository.InMemoryDataService;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,7 +14,6 @@ public class Agenda {
 
     public Agenda() {
         repository = ContatoRepository.getInstance();
-        repository.setRepository(new CSVDataService());
     }
 
     public static Agenda getInstance() {

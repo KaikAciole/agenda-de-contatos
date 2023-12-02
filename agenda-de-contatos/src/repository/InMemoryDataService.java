@@ -10,6 +10,7 @@ public class InMemoryDataService implements ContatoDataService {
     @Override
     public void add(Contato c) {
         contatos.add(c);
+        CSVDataService.exportar();
     }
 
     @Override
