@@ -314,7 +314,9 @@ public class MainWindow extends JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>
+
+        jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
+    }
 
     private void jBotaoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -344,6 +346,12 @@ public class MainWindow extends JFrame {
 
     private void jComboBoxFiltrarActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    }
+
+    private void excluirContato(int index) {
+        Contato contato = agenda.get(index);
+        agenda.removerContato(contato.getNome() + contato.getSobrenome());
+        atualizarListaContatos();
     }
 
     public void atualizarListaContatos() {

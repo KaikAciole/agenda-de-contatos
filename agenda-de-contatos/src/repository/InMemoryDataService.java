@@ -36,5 +36,6 @@ public class InMemoryDataService implements ContatoDataService {
     @Override
     public void remove(Contato c) {
         contatos.remove(c);
+        CSVDataService.exportar();
     }
 }

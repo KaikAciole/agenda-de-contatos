@@ -165,8 +165,6 @@ public class AddWindow extends JFrame {
                                 .addContainerGap())
         );
 
-        jButton1.addActionListener(e -> adicionarContato());
-        jButton2.addActionListener(e -> limparCampos());
 
         jSeparator3.setOrientation(SwingConstants.VERTICAL);
 
@@ -256,7 +254,10 @@ public class AddWindow extends JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>
+
+        jButton1.addActionListener(e -> adicionarContato());
+        jButton2.addActionListener(e -> limparCampos());
+    }
 
     private void jCampoNumeroActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
