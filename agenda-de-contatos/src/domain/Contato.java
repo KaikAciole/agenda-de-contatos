@@ -82,6 +82,10 @@ public class Contato {
         this.endereco = endereco;
     }
 
+    public String getDescricao() {
+        return nome + " " + sobrenome + " - " + numero;
+    }
+
     @Override
     public String toString() {
         return "-------------------------" + "\n" +

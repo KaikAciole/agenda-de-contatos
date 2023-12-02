@@ -4,11 +4,56 @@
  */
 package GUI;
 
+import domain.Agenda;
+import domain.Contato;
+
+import javax.swing.*;
+import java.util.List;
+
 /**
  *
  * @author Kaik Aciole
  */
-public class MainWindow extends javax.swing.JFrame {
+public class MainWindow extends JFrame {
+    private static MainWindow instance;
+    private final Agenda agenda = Agenda.getInstance();
+
+    private JButton jBotaoAdicionar;
+    private JButton jBotaoAdicionar1;
+    private JButton jBotaoEditar;
+    private JButton jBotaoEditar1;
+    private JButton jBotaoExcluir;
+    private JButton jBotaoExcluir1;
+    private JComboBox<String> jComboBoxFiltrar;
+    private JFormattedTextField jFormattedTextField1;
+    private JFormattedTextField jFormattedTextField2;
+    private JFormattedTextField jFormattedTextField3;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabelFiltrar;
+    private JList<String> jList1;
+    private JMenu jMenu1;
+    private JMenu jMenu2;
+    private JMenuBar jMenuBar1;
+    private JPanel jPainelBotoes;
+    private JPanel jPainelBotoes1;
+    private JPanel jPainelBuscar;
+    private JPanel jPainelBuscar1;
+    private JPanel jPainelBuscar2;
+    private JPanel jPainelLista;
+    private JPanel jPainelTitulo;
+    private JPanel jPanel1;
+    private JScrollPane jScrollPane1;
+    private JLabel jTituloContatos;
+
+    public static MainWindow getInstance() {
+        if (instance == null) {
+            instance = new MainWindow();
+        }
+
+        return instance;
+    }
 
     /**
      * Creates new form MainWindow
@@ -26,28 +71,28 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
     private void initComponents() {
 
-        jPainelBotoes = new javax.swing.JPanel();
-        jBotaoAdicionar = new javax.swing.JButton();
-        jBotaoExcluir = new javax.swing.JButton();
-        jBotaoEditar = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jPainelBotoes1 = new javax.swing.JPanel();
-        jBotaoAdicionar1 = new javax.swing.JButton();
-        jBotaoExcluir1 = new javax.swing.JButton();
-        jBotaoEditar1 = new javax.swing.JButton();
-        jPainelLista = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jPainelBuscar2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
-        jComboBoxFiltrar = new javax.swing.JComboBox<>();
-        jLabelFiltrar = new javax.swing.JLabel();
-        jPainelTitulo = new javax.swing.JPanel();
-        jTituloContatos = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jPainelBotoes = new JPanel();
+        jBotaoAdicionar = new JButton();
+        jBotaoExcluir = new JButton();
+        jBotaoEditar = new JButton();
+        jPanel1 = new JPanel();
+        jPainelBotoes1 = new JPanel();
+        jBotaoAdicionar1 = new JButton();
+        jBotaoExcluir1 = new JButton();
+        jBotaoEditar1 = new JButton();
+        jPainelLista = new JPanel();
+        jScrollPane1 = new JScrollPane();
+        jList1 = new JList<>();
+        jPainelBuscar2 = new JPanel();
+        jLabel3 = new JLabel();
+        jFormattedTextField3 = new JFormattedTextField();
+        jComboBoxFiltrar = new JComboBox<>();
+        jLabelFiltrar = new JLabel();
+        jPainelTitulo = new JPanel();
+        jTituloContatos = new JLabel();
+        jMenuBar1 = new JMenuBar();
+        jMenu1 = new JMenu();
+        jMenu2 = new JMenu();
 
         jBotaoAdicionar.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoAdicionar.setForeground(new java.awt.Color(255, 255, 255));
@@ -146,7 +191,10 @@ public class MainWindow extends javax.swing.JFrame {
         );
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Contato 1 - Silva -(52) 52525-4125", "Contato 2", "Contato 3", "Contato 4", "Contato 5" };
+            String[] strings = agenda.listarContatos().stream()
+                    .map(contato -> contato.getDescricao())
+                    .toArray(String[]::new);
+
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -290,7 +338,6 @@ public class MainWindow extends javax.swing.JFrame {
         AddWindow tela = new AddWindow();
         tela.setVisible(true);
         tela.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
-
     }
 
     private void jBotaoEditarActionPerformed(java.awt.event.ActionEvent evt) {
@@ -301,8 +348,7 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         AddWindow tela = new AddWindow();
         tela.setVisible(true);
-        tela.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
-
+        tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     private void jBotaoEditar1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -315,6 +361,19 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jComboBoxFiltrarActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+    }
+
+    public void atualizarListaContatos() {
+        DefaultListModel<String> model = new DefaultListModel<>();
+
+        // Preencher o modelo com os contatos da agenda
+        List<Contato> contatos = agenda.listarContatos();
+        for (Contato contato : contatos) {
+            model.addElement(contato.getDescricao());
+        }
+
+        // Definir o novo modelo na JList
+        jList1.setModel(model);
     }
 
     /**
@@ -347,39 +406,8 @@ public class MainWindow extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainWindow().setVisible(true);
+                getInstance().setVisible(true);
             }
         });
     }
-
-    // Variables declaration - do not modify
-    private javax.swing.JButton jBotaoAdicionar;
-    private javax.swing.JButton jBotaoAdicionar1;
-    private javax.swing.JButton jBotaoEditar;
-    private javax.swing.JButton jBotaoEditar1;
-    private javax.swing.JButton jBotaoExcluir;
-    private javax.swing.JButton jBotaoExcluir1;
-    private javax.swing.JComboBox<String> jComboBoxFiltrar;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabelFiltrar;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPainelBotoes;
-    private javax.swing.JPanel jPainelBotoes1;
-    private javax.swing.JPanel jPainelBuscar;
-    private javax.swing.JPanel jPainelBuscar1;
-    private javax.swing.JPanel jPainelBuscar2;
-    private javax.swing.JPanel jPainelLista;
-    private javax.swing.JPanel jPainelTitulo;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel jTituloContatos;
-    // End of variables declaration
 }
