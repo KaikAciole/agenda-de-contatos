@@ -35,7 +35,7 @@ public class ContatoService {
         repository.remove(c);
     }
 
-    public boolean existe(String numero){
-        return repository.exists(numero);
+    public boolean existsNumero(String numero){
+        return repository.existsNumber(numero);
     }
 }

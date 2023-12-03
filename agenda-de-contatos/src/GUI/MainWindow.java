@@ -349,9 +349,11 @@ public class MainWindow extends JFrame {
     }
 
     private void excluirContato(int index) {
-        Contato contato = agenda.get(index);
-        agenda.removerContato(contato.getNome() + contato.getSobrenome());
-        atualizarListaContatos();
+        if (index >= 0) {
+            Contato contato = agenda.get(index);
+            agenda.removerContato(contato.getNome() + contato.getSobrenome());
+            atualizarListaContatos();
+        }
     }
 
     public void atualizarListaContatos() {

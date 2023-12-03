@@ -20,6 +20,6 @@ public class NumberValidator extends Validator<String> {
         Pattern pattern = Pattern.compile(numeroPattern);
         Matcher matcher = pattern.matcher(numero);
 
-        return matcher.matches() && (!checkIfExists || !agenda.existe(numero));
+        return matcher.matches() && (!checkIfExists || !agenda.existeNumero(numero));
     }
 }

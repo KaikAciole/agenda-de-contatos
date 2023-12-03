@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import Validators.NameValidator;
 import Validators.NumberValidator;
 import Validators.Validator;
 import domain.Agenda;
@@ -278,9 +279,10 @@ public class AddWindow extends JFrame {
 
 
         if (!nome.trim().isEmpty() && !sobrenome.trim().isEmpty() && !numero.replaceAll("[^0-9]", "").trim().isEmpty()) {
-            Validator<String> validator = new NumberValidator(true);
+            Validator<String> validatorNumber = new NumberValidator(true);
+            Validator<String> validatornName = new NameValidator();
 
-            if (validator.validate(numero)) {
+            if (validatorNumber.validate(numero) && validatornName.validate(nome + sobrenome)) {
                 agenda.adicionaContato(nome, sobrenome, numero);
                 limparCampos();
 
@@ -288,8 +290,10 @@ public class AddWindow extends JFrame {
                 main.atualizarListaContatos();
 
                 JOptionPane.showMessageDialog(this, "Contato adicionado ✅");
-            } else {
+            } else if (!validatorNumber.validate(numero)){
                 JOptionPane.showMessageDialog(this, "Número já cadastrado.");
+            } else if (!validatornName.validate(nome + sobrenome)) {
+                JOptionPane.showMessageDialog(this, "Nome e sobrenome já existentes.");
             }
 
         } else {

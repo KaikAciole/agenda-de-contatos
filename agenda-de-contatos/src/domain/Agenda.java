@@ -1,7 +1,6 @@
 package domain;
 
 import repository.ContatoRepository;
-import repository.InMemoryDataService;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -46,8 +45,12 @@ public class Agenda {
         repository.remove(c);
     }
 
-    public boolean existe(String numero){
-        return repository.exists(numero);
+    public boolean existeNumero(String numero){
+        return repository.existsNumber(numero);
+    }
+
+    public boolean existeNome(String numero){
+        return repository.existsName(numero);
     }
 
     public void setNome(String nomeSobrenome, String nomeMudado){

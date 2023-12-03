@@ -9,6 +9,7 @@ public interface ContatoDataService {
     List<Contato> getAll();
     void update(Contato p);
     List<Contato> search(String termo);
-    boolean exists(String numero);
+    boolean existsNumber(String numero);
+    boolean existsName(String termo);
     void remove(Contato p);
 }

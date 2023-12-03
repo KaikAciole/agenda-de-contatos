@@ -41,8 +41,12 @@ public class ContatoRepository {
         return dataService.search(termo);
     }
 
-    public boolean exists(String num) {
-        return dataService.exists(num);
+    public boolean existsNumber(String num) {
+        return dataService.existsNumber(num);
+    }
+
+    public boolean existsName(String num) {
+        return dataService.existsName(num);
     }
 
     public void remove(Contato p) {
