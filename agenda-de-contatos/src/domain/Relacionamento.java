@@ -5,7 +5,7 @@ public enum Relacionamento {
     FAMILIA("Família"),
     AMIGO("Amigo"),
     INIMIGO("Inimigo"),
-    EMERGENCIA("Emergência"),
+    EMERGENCIA("Emergencia"),
     INDEFINIDO("Indefinido");
 
 

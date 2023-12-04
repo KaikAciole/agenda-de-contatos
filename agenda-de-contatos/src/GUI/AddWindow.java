@@ -101,7 +101,7 @@ public class AddWindow extends JFrame {
         jLabelRedeSocial.setForeground(new Color(0, 0, 51));
         jLabelRedeSocial.setText("Rede Social:");
 
-        jComboBoxRelacionamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Indefinido", "Colega", "Família", "Amigo", "Inimigo", "Emergência"}));
+        jComboBoxRelacionamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Indefinido", "Colega", "Familia", "Amigo", "Inimigo", "Emergencia"}));
         jComboBoxRedeSocial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Telefone", "Whatsapp", "Telegram"}));
 
 
@@ -290,7 +290,6 @@ public class AddWindow extends JFrame {
         String redeSocial = jComboBoxRedeSocial.getSelectedItem().toString();
         String aniversario = jCampoAniversario.getText();
         String endereco = jCampoEndereco.getText();
-        System.out.println(redeSocial + relacionamento);
 
         if (!nome.trim().isEmpty() && !sobrenome.trim().isEmpty() && !numero.replaceAll("[^0-9]", "").trim().isEmpty()) {
             Validator<String> validatorNumber = new NumberValidator(true);
@@ -337,6 +336,9 @@ public class AddWindow extends JFrame {
         jCampoSobrenome.setText("");
         jCampoNumero.setText("");
         jCampoAniversario.setText("");
+        jCampoEndereco.setText("");
+        jComboBoxRelacionamento.setSelectedItem(Relacionamento.INDEFINIDO.toString());
+        jComboBoxRedeSocial.setSelectedItem(RedeSocial.TELEFONE.toString());
     }
 
     public static void main(String args[]) {

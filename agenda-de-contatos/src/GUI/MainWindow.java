@@ -20,8 +20,6 @@ public class MainWindow extends JFrame {
     private JFormattedTextField jFormattedTextField1;
     private JFormattedTextField jFormattedTextField2;
     private JFormattedTextField jFormattedTextField3;
-    private JLabel jLabel1;
-    private JLabel jLabel2;
     private JLabel jLabel3;
     private JLabel jLabelFiltrar;
     private JList<String> jList1;
@@ -30,8 +28,6 @@ public class MainWindow extends JFrame {
     private JMenuBar jMenuBar1;
     private JPanel jPainelBotoes;
     private JPanel jPainelBotoes1;
-    private JPanel jPainelBuscar;
-    private JPanel jPainelBuscar1;
     private JPanel jPainelBuscar2;
     private JPanel jPainelLista;
     private JPanel jPainelTitulo;
@@ -132,7 +128,7 @@ public class MainWindow extends JFrame {
 
         jBotaoEditar1.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoEditar1.setForeground(new java.awt.Color(255, 255, 255));
-        jBotaoEditar1.setText("Editar");
+        jBotaoEditar1.setText("Exibir / Editar");
 
         javax.swing.GroupLayout jPainelBotoes1Layout = new javax.swing.GroupLayout(jPainelBotoes1);
         jPainelBotoes1.setLayout(jPainelBotoes1Layout);
@@ -303,10 +299,11 @@ public class MainWindow extends JFrame {
         jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex()));
 
         jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
+
+        //jFormattedTextField1.addActionListener(e -> buscarContato());
     }
 
     private void jBotaoAdicionar1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
         AddWindow tela = new AddWindow();
         tela.setVisible(true);
         tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -320,7 +317,11 @@ public class MainWindow extends JFrame {
             tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         }
     }
+    private void buscarContato(){
+       String termo = jFormattedTextField1.getText();
+        System.out.println(termo);
 
+    }
 
     private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
