@@ -32,6 +32,12 @@ public class Agenda {
         repository.add(contato);
     }
 
+    public void adicionaContato(String nome, String sobrenome, String numero, String aniversario) {
+        Contato contato = new Contato(nome, sobrenome, numero);
+        contato.setAniversario(aniversario);
+        repository.add(contato);
+    }
+
     public List<Contato> listarContatos() {
         return repository.getAll();
     }
@@ -42,6 +48,11 @@ public class Agenda {
 
     public void removerContato(String nomeSobrenome){
         Contato c = repository.search(nomeSobrenome).get(0);
+        repository.remove(c);
+    }
+
+    public void removerContato(int index){
+        Contato c = this.get(index);
         repository.remove(c);
     }
 

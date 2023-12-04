@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="funcionalidade fluindo + excluir funcionando!">
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/NameValidator.java" afterDir="false" />
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="funcionalidade fluindo + excluir funcionando + valirdador para nomes repetidos!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/NumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/Validators/NumberValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/ContatoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/InMemoryDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/service/ContatoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/service/ContatoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/CSVDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/CSVDataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
     </list>
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />
@@ -310,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701553234452</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="funcionalidade fluindo + excluir funcionando + valirdador para nomes repetidos!">
+      <created>1701626785445</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701626785445</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +347,7 @@
     <MESSAGE value="funcionalidade fluindo" />
     <MESSAGE value="funcionalidade fluindo!" />
     <MESSAGE value="funcionalidade fluindo + excluir funcionando!" />
-    <option name="LAST_COMMIT_MESSAGE" value="funcionalidade fluindo + excluir funcionando!" />
+    <MESSAGE value="funcionalidade fluindo + excluir funcionando + valirdador para nomes repetidos!" />
+    <option name="LAST_COMMIT_MESSAGE" value="funcionalidade fluindo + excluir funcionando + valirdador para nomes repetidos!" />
   </component>
 </project>

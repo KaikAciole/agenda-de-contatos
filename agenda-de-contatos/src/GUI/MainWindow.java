@@ -80,11 +80,6 @@ public class MainWindow extends JFrame {
         jBotaoAdicionar.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoAdicionar.setForeground(new java.awt.Color(255, 255, 255));
         jBotaoAdicionar.setText("Adicionar");
-        jBotaoAdicionar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBotaoAdicionarActionPerformed(evt);
-            }
-        });
 
         jBotaoExcluir.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoExcluir.setForeground(new java.awt.Color(255, 255, 255));
@@ -93,11 +88,6 @@ public class MainWindow extends JFrame {
         jBotaoEditar.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoEditar.setForeground(new java.awt.Color(255, 255, 255));
         jBotaoEditar.setText("Editar");
-        jBotaoEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBotaoEditarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPainelBotoesLayout = new javax.swing.GroupLayout(jPainelBotoes);
         jPainelBotoes.setLayout(jPainelBotoesLayout);
@@ -143,11 +133,6 @@ public class MainWindow extends JFrame {
         jBotaoEditar1.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoEditar1.setForeground(new java.awt.Color(255, 255, 255));
         jBotaoEditar1.setText("Editar");
-        jBotaoEditar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBotaoEditar1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPainelBotoes1Layout = new javax.swing.GroupLayout(jPainelBotoes1);
         jPainelBotoes1.setLayout(jPainelBotoes1Layout);
@@ -315,18 +300,9 @@ public class MainWindow extends JFrame {
         pack();
         setLocationRelativeTo(null);
 
+        jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex()));
+
         jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
-    }
-
-    private void jBotaoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        AddWindow tela = new AddWindow();
-        tela.setVisible(true);
-        tela.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
-    }
-
-    private void jBotaoEditarActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
     }
 
     private void jBotaoAdicionar1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -336,8 +312,13 @@ public class MainWindow extends JFrame {
         tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
-    private void jBotaoEditar1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    private void editarContato(int index) {
+        if (index >= 0){
+            Contato contato = agenda.get(index);
+            AddWindow tela = new AddWindow(contato, index);
+            tela.setVisible(true);
+            tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        }
     }
 
     private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -350,8 +331,7 @@ public class MainWindow extends JFrame {
 
     private void excluirContato(int index) {
         if (index >= 0) {
-            Contato contato = agenda.get(index);
-            agenda.removerContato(contato.getNome() + contato.getSobrenome());
+            agenda.removerContato(index);
             atualizarListaContatos();
         }
     }

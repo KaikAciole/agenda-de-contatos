@@ -26,7 +26,7 @@ public class CSVDataService {
 
             for (Contato contato : agenda.listarContatos()) {
                 String escreveContato = contato.getNome() + ";" + contato.getSobrenome() + ";" + contato.getNumero() + ";" +
-                        tratarNulo(contato.getRelacionamento().toString()) + ";" + contato.getEndereco() + ";" +
+                        tratarNulo(contato.getRelacionamento().toString()) + ";" + tratarNulo(contato.getEndereco()) + ";" +
                         tratarNulo(contato.getAniversario()) + ";" + tratarNulo(contato.getRedeSocial().toString());
                 bw.newLine();
                 bw.write(escreveContato);

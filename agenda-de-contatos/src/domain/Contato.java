@@ -1,5 +1,7 @@
 package domain;
 
+import repository.CSVDataService;
+
 public class Contato {
     private String nome;
     private String sobrenome;
@@ -7,22 +9,12 @@ public class Contato {
     Relacionamento relacionamento = Relacionamento.INDEFINIDO;
     RedeSocial redeSocial = RedeSocial.TELEFONE;
     private String aniversario;
-    private String endereco = "";
+    private String endereco;
 
     public Contato(String nome, String sobrenome, String numero) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.numero = numero;
-
-    }
-
-    public Contato(String nome, String sobrenome, String numero, Relacionamento relacionamento) {
-        this(nome, sobrenome, numero);
-        this.relacionamento = relacionamento;
-    }
-
-    public Contato(String nome, String sobrenome, String numero, Relacionamento relacionamento, RedeSocial redeSocial) {
-        this(nome, sobrenome, numero, relacionamento);
 
     }
 
@@ -71,7 +63,11 @@ public class Contato {
     }
 
     public void setAniversario(String aniversario) {
-        this.aniversario = String.valueOf(aniversario);
+        if (aniversario.replaceAll("/", "").trim().isEmpty()) {
+            this.aniversario = null;
+        } else {
+            this.aniversario = aniversario;
+        }
     }
 
     public String getEndereco() {
