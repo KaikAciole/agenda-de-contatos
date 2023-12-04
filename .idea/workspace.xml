@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="funcionalidade fluindo + excluir funcionando + valirdador para nomes repetidos!">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Contato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/repository/CSVDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/repository/CSVDataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
     </list>
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />

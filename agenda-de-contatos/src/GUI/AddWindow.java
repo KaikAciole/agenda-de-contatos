@@ -297,7 +297,7 @@ public class AddWindow extends JFrame {
             Validator<String> validatornName = new NameValidator();
 
             if (validatorNumber.validate(numero) && validatornName.validate(nome + sobrenome)) {
-                agenda.adicionaContato(nome, sobrenome, numero, Relacionamento.valueOf(relacionamento), RedeSocial.valueOf(redeSocial), aniversario, endereco);
+                agenda.adicionaContato(nome, sobrenome, numero, Relacionamento.valueOf(relacionamento.toUpperCase()), RedeSocial.valueOf(redeSocial.toUpperCase()), aniversario, endereco);
 
                 limparCampos();
 
@@ -322,6 +322,9 @@ public class AddWindow extends JFrame {
         jCampoSobrenome.setText(contato.getSobrenome());
         jCampoNumero.setText(contato.getNumero());
         jCampoAniversario.setText(contato.getAniversario());
+        jCampoEndereco.setText(contato.getEndereco());
+        jComboBoxRelacionamento.setSelectedItem(contato.getRelacionamento().toString());
+        jComboBoxRedeSocial.setSelectedItem(contato.getRedeSocial().toString());
     }
 
     private void editarContato(int index) {
