@@ -5,6 +5,8 @@ import Validators.NumberValidator;
 import Validators.Validator;
 import domain.Agenda;
 import domain.Contato;
+import domain.RedeSocial;
+import domain.Relacionamento;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -17,12 +19,12 @@ public class AddWindow extends JFrame {
 
     private JButton jButton1;
     private JButton jButton2;
+    private JComboBox jComboBoxRelacionamento;
+    private JComboBox jComboBoxRedeSocial;
     private JFormattedTextField jCampoAniversario;
     private JTextField jCampoEndereco;
     private JTextField jCampoNome;
     private JFormattedTextField jCampoNumero;
-    private JTextField jCampoRedeSocial;
-    private JTextField jCampoRelacionamento;
     private JTextField jCampoSobrenome;
     private JLabel jLabelAniversario;
     private JLabel jLabelEndereco;
@@ -46,6 +48,8 @@ public class AddWindow extends JFrame {
     private void initComponents(Contato contato, int index) {
 
         jPainelPrincipal = new JPanel();
+        jComboBoxRelacionamento = new JComboBox();
+        jComboBoxRedeSocial = new JComboBox();
         jLabelNome = new JLabel();
         jLabelSobrenome = new JLabel();
         jLabelNumero = new JLabel();
@@ -58,8 +62,6 @@ public class AddWindow extends JFrame {
         jCampoSobrenome = new JTextField();
         jCampoNome = new JTextField();
         jCampoEndereco = new JTextField();
-        jCampoRelacionamento = new JTextField();
-        jCampoRedeSocial = new JTextField();
         jPanel1 = new JPanel();
         jButton1 = new JButton();
         jButton2 = new JButton();
@@ -99,6 +101,10 @@ public class AddWindow extends JFrame {
         jLabelRedeSocial.setForeground(new Color(0, 0, 51));
         jLabelRedeSocial.setText("Rede Social:");
 
+        jComboBoxRelacionamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Indefinido", "Colega", "Família", "Amigo", "Inimigo", "Emergência"}));
+        jComboBoxRedeSocial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Telefone", "Whatsapp", "Telegram"}));
+
+
         try {
             jCampoNumero.setFormatterFactory(new DefaultFormatterFactory(new MaskFormatter("(##)#####-####")));
         } catch (java.text.ParseException ex) {
@@ -116,9 +122,16 @@ public class AddWindow extends JFrame {
             ex.printStackTrace();
         }
 
-        jCampoRelacionamento.addActionListener(new ActionListener() {
+        jComboBoxRelacionamento.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                jCampoRelacionamentoActionPerformed(evt);
+                jComboBoxRelacionamentoActionPerformed(evt);
+            }
+        });
+
+        jComboBoxRedeSocial.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                jComboBoxRedeSocialActionPerfomed(evt);
             }
         });
 
@@ -176,8 +189,8 @@ public class AddWindow extends JFrame {
                                 .addComponent(jSeparator2, GroupLayout.PREFERRED_SIZE, 12, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPainelPrincipalLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                                        .addComponent(jCampoRedeSocial, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jCampoRelacionamento, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBoxRedeSocial, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBoxRelacionamento, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jCampoEndereco, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jCampoAniversario, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jCampoNumero, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
@@ -215,11 +228,11 @@ public class AddWindow extends JFrame {
                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addGroup(jPainelPrincipalLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                                                         .addComponent(jLabelRelacionamento)
-                                                                        .addComponent(jCampoRelacionamento, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                                                        .addComponent(jComboBoxRelacionamento, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addGroup(jPainelPrincipalLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                                                         .addComponent(jLabelRedeSocial)
-                                                                        .addComponent(jCampoRedeSocial, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                                                                        .addComponent(jComboBoxRedeSocial, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                                                         .addComponent(jSeparator2, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 274, GroupLayout.PREFERRED_SIZE))
                                                 .addGap(0, 245, Short.MAX_VALUE))
                                         .addGroup(jPainelPrincipalLayout.createSequentialGroup()
@@ -258,26 +271,33 @@ public class AddWindow extends JFrame {
     }
 
     private void jCampoNumeroActionPerformed(ActionEvent evt) {
-        // TODO add your handling code here:
+        // Código a ser adicionado ainda. (Kaik)
     }
 
-    private void jCampoRelacionamentoActionPerformed(ActionEvent evt) {
-        // TODO add your handling code here:
+    private void jComboBoxRelacionamentoActionPerformed(ActionEvent evt) {
+        // Código a ser adicionado ainda. (Kaik)
+    }
+
+    private void jComboBoxRedeSocialActionPerfomed(ActionEvent evt){
+        // Código a ser adicionado ainda. (Kaik)
     }
 
     private void adicionarContato() {
         String nome = jCampoNome.getText();
         String sobrenome = jCampoSobrenome.getText();
         String numero = jCampoNumero.getText();
+        String relacionamento = jComboBoxRelacionamento.getSelectedItem().toString();
+        String redeSocial = jComboBoxRedeSocial.getSelectedItem().toString();
         String aniversario = jCampoAniversario.getText();
-
+        String endereco = jCampoEndereco.getText();
+        System.out.println(redeSocial + relacionamento);
 
         if (!nome.trim().isEmpty() && !sobrenome.trim().isEmpty() && !numero.replaceAll("[^0-9]", "").trim().isEmpty()) {
             Validator<String> validatorNumber = new NumberValidator(true);
             Validator<String> validatornName = new NameValidator();
 
             if (validatorNumber.validate(numero) && validatornName.validate(nome + sobrenome)) {
-                agenda.adicionaContato(nome, sobrenome, numero, aniversario);
+                agenda.adicionaContato(nome, sobrenome, numero, Relacionamento.valueOf(relacionamento), RedeSocial.valueOf(redeSocial), aniversario, endereco);
 
                 limparCampos();
 

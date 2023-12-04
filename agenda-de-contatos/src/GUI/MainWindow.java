@@ -184,7 +184,7 @@ public class MainWindow extends JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-//        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contorno-da-lupa-de-pesquisa.png"))); // NOI18N
+//        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AgendaDeContatos//agenda-de-contatos//src//img//contorno-da-lupa-de-pesquisa.png"))); // NOI18N
 
         jFormattedTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,7 +192,7 @@ public class MainWindow extends JFrame {
             }
         });
 
-        jComboBoxFiltrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Relacionamento", "Rede Social", "Chamada de Video", " " }));
+        jComboBoxFiltrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chamada de Vídeo", "Colega", "Família", "Amigo", "Inimigo", "Emergência", "Whatsapp", "Telegram", "Telefone" }));
         jComboBoxFiltrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxFiltrarActionPerformed(evt);

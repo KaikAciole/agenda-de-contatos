@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="funcionalidade fluindo + excluir funcionando + valirdador para nomes repetidos!">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" afterDir="false" />
@@ -164,6 +165,7 @@
       <workItem from="1701263223937" duration="2529000" />
       <workItem from="1701401637181" duration="1549000" />
       <workItem from="1701460763384" duration="2904000" />
+      <workItem from="1701707734567" duration="10129000" />
     </task>
     <task id="LOCAL-00001" summary="menu de edição">
       <option name="closed" value="true" />

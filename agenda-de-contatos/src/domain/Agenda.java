@@ -32,9 +32,8 @@ public class Agenda {
         repository.add(contato);
     }
 
-    public void adicionaContato(String nome, String sobrenome, String numero, String aniversario) {
-        Contato contato = new Contato(nome, sobrenome, numero);
-        contato.setAniversario(aniversario);
+    public void adicionaContato(String nome, String sobrenome, String numero, Relacionamento relacionamento, RedeSocial redesocial, String aniversario, String endereco) {
+        Contato contato = new Contato(nome, sobrenome, numero, relacionamento, redesocial, aniversario, endereco);
         repository.add(contato);
     }
 

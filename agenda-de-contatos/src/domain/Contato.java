@@ -15,6 +15,14 @@ public class Contato {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.numero = numero;
+    }
+
+    public Contato(String nome, String sobrenome, String numero, Relacionamento relacionamento, RedeSocial redeSocial, String aniversario, String endereco){
+        this(nome, sobrenome, numero);
+        this.relacionamento = relacionamento;
+        this.redeSocial = redeSocial;
+        this.aniversario = aniversario;
+        this.endereco = endereco;
 
     }
 
