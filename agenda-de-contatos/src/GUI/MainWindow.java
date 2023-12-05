@@ -10,19 +10,16 @@ public class MainWindow extends JFrame {
     private static MainWindow instance;
     private final Agenda agenda = Agenda.getInstance();
 
-    private JButton jBotaoAdicionar;
     private JButton jBotaoAdicionar1;
-    private JButton jBotaoEditar;
     private JButton jBotaoEditar1;
-    private JButton jBotaoExcluir;
     private JButton jBotaoExcluir1;
+    private JButton jBotaoPesquisar;
     private JComboBox<String> jComboBoxFiltrar;
-    private JFormattedTextField jFormattedTextField1;
-    private JFormattedTextField jFormattedTextField2;
     private JFormattedTextField jFormattedTextField3;
     private JLabel jLabel3;
     private JLabel jLabelFiltrar;
     private JList<String> jList1;
+    private JList<String> jListBusca;
     private JMenu jMenu1;
     private JMenu jMenu2;
     private JMenuBar jMenuBar1;
@@ -51,17 +48,16 @@ public class MainWindow extends JFrame {
     private void initComponents() {
 
         jPainelBotoes = new JPanel();
-        jBotaoAdicionar = new JButton();
-        jBotaoExcluir = new JButton();
-        jBotaoEditar = new JButton();
         jPanel1 = new JPanel();
         jPainelBotoes1 = new JPanel();
         jBotaoAdicionar1 = new JButton();
         jBotaoExcluir1 = new JButton();
+        jBotaoPesquisar = new JButton();
         jBotaoEditar1 = new JButton();
         jPainelLista = new JPanel();
         jScrollPane1 = new JScrollPane();
         jList1 = new JList<>();
+        jListBusca = new JList<>();
         jPainelBuscar2 = new JPanel();
         jLabel3 = new JLabel();
         jFormattedTextField3 = new JFormattedTextField();
@@ -73,42 +69,6 @@ public class MainWindow extends JFrame {
         jMenu1 = new JMenu();
         jMenu2 = new JMenu();
 
-        jBotaoAdicionar.setBackground(new java.awt.Color(0, 0, 51));
-        jBotaoAdicionar.setForeground(new java.awt.Color(255, 255, 255));
-        jBotaoAdicionar.setText("Adicionar");
-
-        jBotaoExcluir.setBackground(new java.awt.Color(0, 0, 51));
-        jBotaoExcluir.setForeground(new java.awt.Color(255, 255, 255));
-        jBotaoExcluir.setText("Excluir");
-
-        jBotaoEditar.setBackground(new java.awt.Color(0, 0, 51));
-        jBotaoEditar.setForeground(new java.awt.Color(255, 255, 255));
-        jBotaoEditar.setText("Editar");
-
-        javax.swing.GroupLayout jPainelBotoesLayout = new javax.swing.GroupLayout(jPainelBotoes);
-        jPainelBotoes.setLayout(jPainelBotoesLayout);
-        jPainelBotoesLayout.setHorizontalGroup(
-                jPainelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelBotoesLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBotaoAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBotaoEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBotaoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPainelBotoesLayout.setVerticalGroup(
-                jPainelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPainelBotoesLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPainelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jBotaoExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                                        .addComponent(jBotaoEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jBotaoAdicionar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap())
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agenda de Contatos");
         setMinimumSize(new java.awt.Dimension(420, 580));
@@ -118,7 +78,7 @@ public class MainWindow extends JFrame {
         jBotaoAdicionar1.setText("Adicionar");
         jBotaoAdicionar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBotaoAdicionar1ActionPerformed(evt);
+                    jBotaoAdicionar1ActionPerformed(evt);
             }
         });
 
@@ -129,6 +89,10 @@ public class MainWindow extends JFrame {
         jBotaoEditar1.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoEditar1.setForeground(new java.awt.Color(255, 255, 255));
         jBotaoEditar1.setText("Exibir / Editar");
+
+        jBotaoPesquisar.setBackground(new java.awt.Color(0, 0, 51));
+        jBotaoPesquisar.setForeground(new java.awt.Color(255, 255, 255));
+        jBotaoPesquisar.setText("OK");
 
         javax.swing.GroupLayout jPainelBotoes1Layout = new javax.swing.GroupLayout(jPainelBotoes1);
         jPainelBotoes1.setLayout(jPainelBotoes1Layout);
@@ -205,6 +169,7 @@ public class MainWindow extends JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelBuscar2Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jBotaoPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -216,6 +181,7 @@ public class MainWindow extends JFrame {
         jPainelBuscar2Layout.setVerticalGroup(
                 jPainelBuscar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jFormattedTextField3)
+                        .addComponent(jBotaoPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPainelBuscar2Layout.createSequentialGroup()
                                 .addGroup(jPainelBuscar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(jPainelBuscar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -300,7 +266,14 @@ public class MainWindow extends JFrame {
 
         jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
 
-        //jFormattedTextField1.addActionListener(e -> buscarContato());
+        jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex()));
+
+        jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
+
+        jBotaoPesquisar.addActionListener(e -> buscarContato());
+
+        //jFormattedTextField3.addActionListener(e -> buscarContato());
+        //jFormattedTextField3.addKeyListener(e-> new KeyEvent e);
     }
 
     private void jBotaoAdicionar1ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -317,10 +290,27 @@ public class MainWindow extends JFrame {
             tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         }
     }
-    private void buscarContato(){
-       String termo = jFormattedTextField1.getText();
-        System.out.println(termo);
 
+    private List<Contato> buscarContato(){
+        String termo = jFormattedTextField3.getText();
+        if(termo.equals("")){
+            JOptionPane.showMessageDialog(this, "Digite algo antes de procurar!");
+        }
+        else{
+            jList1.setVisible(false);
+
+            jListBusca.setModel(new javax.swing.AbstractListModel<String>() {
+                String[] strings = agenda.exibirContato(termo).stream()
+                        .map(contato -> contato.getDescricao())
+                        .toArray(String[]::new);
+
+                public int getSize() { return strings.length; }
+                public String getElementAt(int i) { return strings[i]; }
+            });
+
+            jScrollPane1.setViewportView(jListBusca);
+        }
+        return null;
     }
 
     private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {
