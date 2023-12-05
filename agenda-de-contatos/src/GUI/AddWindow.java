@@ -40,12 +40,12 @@ public class AddWindow extends JFrame {
     private JSeparator jSeparator3;
 
     public AddWindow() {
-        initComponents(null, -1);
+        initComponents(null, null);
     }
-    public AddWindow(Contato contato, int index) {
-        initComponents(contato, index);
+    public AddWindow(Contato contato, String nomeSobrenome) {
+        initComponents(contato, nomeSobrenome);
     }
-    private void initComponents(Contato contato, int index) {
+    private void initComponents(Contato contato, String nomeSobrenome) {
 
         jPainelPrincipal = new JPanel();
         jComboBoxRelacionamento = new JComboBox();
@@ -262,7 +262,7 @@ public class AddWindow extends JFrame {
 
         jButton1.addActionListener(e -> {
             if (contato != null) {
-                editarContato(index);
+                editarContato(nomeSobrenome);
             } else {
                 adicionarContato();
             }
@@ -326,8 +326,8 @@ public class AddWindow extends JFrame {
         jComboBoxRedeSocial.setSelectedItem(contato.getRedeSocial().toString());
     }
 
-    private void editarContato(int index) {
-        agenda.removerContato(index);
+    private void editarContato(String nomeSobrenome) {
+        agenda.removerContato(nomeSobrenome);
         adicionarContato();
     }
 

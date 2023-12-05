@@ -262,13 +262,15 @@ public class MainWindow extends JFrame {
         pack();
         setLocationRelativeTo(null);
 
-        jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex()));
+        if (jList1.isVisible()) {
+            jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex(), jList1));
+            jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex(), jList1));
+        }
 
-        jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
 
-        jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex()));
+        //jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex()));
 
-        jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
+        //jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
 
         jBotaoPesquisar.addActionListener(e -> buscarContato());
 
@@ -282,12 +284,15 @@ public class MainWindow extends JFrame {
         tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
-    private void editarContato(int index) {
+    private void editarContato(int index, JList lista) {
         if (index >= 0){
-            Contato contato = agenda.get(index);
-            AddWindow tela = new AddWindow(contato, index);
+            String nomeSobrenome = (String) lista.getModel().getElementAt(index);
+            nomeSobrenome = nomeSobrenome.substring(0, nomeSobrenome.indexOf("-")).replaceAll(" ", "");
+            Contato contato = agenda.get(nomeSobrenome);
+            AddWindow tela = new AddWindow(contato, nomeSobrenome);
             tela.setVisible(true);
             tela.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         }
     }
 
@@ -295,6 +300,7 @@ public class MainWindow extends JFrame {
         String termo = jFormattedTextField3.getText();
         if(termo.equals("")){
             JOptionPane.showMessageDialog(this, "Digite algo antes de procurar!");
+
         }
         else{
             jList1.setVisible(false);
@@ -309,6 +315,8 @@ public class MainWindow extends JFrame {
             });
 
             jScrollPane1.setViewportView(jListBusca);
+            jBotaoEditar1.addActionListener(e -> editarContato(jListBusca.getSelectedIndex(), jListBusca));
+            jBotaoExcluir1.addActionListener(e -> excluirContato(jListBusca.getSelectedIndex(), jListBusca));
         }
         return null;
     }
@@ -321,11 +329,27 @@ public class MainWindow extends JFrame {
         // TODO add your handling code here:
     }
 
-    private void excluirContato(int index) {
-        if (index >= 0) {
-            agenda.removerContato(index);
-            atualizarListaContatos();
+    private void excluirContato(int index, JList lista) {
+        if (index >= 0){
+            String nomeSobrenome = (String) lista.getModel().getElementAt(index);
+            nomeSobrenome = nomeSobrenome.substring(0, nomeSobrenome.indexOf("-")).replaceAll(" ", "");
+            System.out.println(nomeSobrenome);
+            agenda.removerContato(nomeSobrenome);
+            atualizarListaContatos(lista);
         }
+    }
+
+    public void atualizarListaContatos(JList lista) {
+        DefaultListModel<String> model = new DefaultListModel<>();
+
+        // Preencher o modelo com os contatos da agenda
+        List<Contato> contatos = agenda.listarContatos();
+        for (Contato contato : contatos) {
+            model.addElement(contato.getDescricao());
+        }
+
+        // Definir o novo modelo na JList
+        lista.setModel(model);
     }
 
     public void atualizarListaContatos() {

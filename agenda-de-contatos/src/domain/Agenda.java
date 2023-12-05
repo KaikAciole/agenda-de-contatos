@@ -26,7 +26,9 @@ public class Agenda {
     public Contato get(int index) {
         return repository.getAll().get(index);
     }
-
+    public Contato get(String nomeSobrenome) {
+        return repository.search(nomeSobrenome).get(0);
+    }
     public void adicionaContato(String nome, String sobrenome, String numero) {
         Contato contato = new Contato(nome, sobrenome, numero);
         repository.add(contato);
