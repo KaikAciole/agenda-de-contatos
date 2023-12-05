@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="Cuida">
+    <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="Cuida2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/domain/Agenda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agenda.csv" beforeDir="false" afterPath="$PROJECT_DIR$/agenda.csv" afterDir="false" />
     </list>
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />
@@ -319,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701723400819</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Cuida2">
+      <created>1701743130188</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701743130188</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,6 +360,7 @@
     <MESSAGE value="funcionalidade fluindo + excluir funcionando!" />
     <MESSAGE value="funcionalidade fluindo + excluir funcionando + valirdador para nomes repetidos!" />
     <MESSAGE value="Cuida" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cuida" />
+    <MESSAGE value="Cuida2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cuida2" />
   </component>
 </project>

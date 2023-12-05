@@ -267,15 +267,9 @@ public class MainWindow extends JFrame {
             jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex(), jList1));
         }
 
-
-        //jBotaoEditar1.addActionListener(e -> editarContato(jList1.getSelectedIndex()));
-
-        //jBotaoExcluir1.addActionListener(e -> excluirContato(jList1.getSelectedIndex()));
-
+        jBotaoPesquisar.addActionListener(e -> buscarContato());
         jBotaoPesquisar.addActionListener(e -> buscarContato());
 
-        //jFormattedTextField3.addActionListener(e -> buscarContato());
-        //jFormattedTextField3.addKeyListener(e-> new KeyEvent e);
     }
 
     private void jBotaoAdicionar1ActionPerformed(java.awt.event.ActionEvent evt) {
