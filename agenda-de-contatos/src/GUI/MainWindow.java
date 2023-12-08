@@ -5,6 +5,7 @@ import domain.Contato;
 
 import javax.swing.*;
 import java.util.List;
+import java.util.Objects;
 
 public class MainWindow extends JFrame {
     private static MainWindow instance;
@@ -320,7 +321,10 @@ public class MainWindow extends JFrame {
     }
 
     private void jComboBoxFiltrarActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        int item = jComboBoxFiltrar.getSelectedIndex();
+        if (item == 1){
+            filtrarListaContatosColega();
+        }
     }
 
     private void excluirContato(int index, JList lista) {
@@ -331,6 +335,21 @@ public class MainWindow extends JFrame {
             agenda.removerContato(nomeSobrenome);
             atualizarListaContatos(lista);
         }
+    }
+
+    public void filtrarListaContatosColega(){
+        DefaultListModel<String> model = new DefaultListModel<>();
+
+        // Preencher o modelo com os contatos da agenda
+        List<Contato> contatos = agenda.listarContatos();
+        for (Contato contato : contatos) {
+            if(contato.getRelacionamento().toString().equalsIgnoreCase("Colega")){
+                model.addElement(contato.getDescricao());
+            }
+        }
+
+        // Definir o novo modelo na JList
+        jList1.setModel(model);
     }
 
     public void atualizarListaContatos(JList lista) {
