@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="agendaDeContatos:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/agendaDeContatos_jar</output-path>
+    <root id="archive" name="agendaDeContatos.jar">
+      <element id="module-output" name="agendaDeContatos" />
+    </root>
+  </artifact>
+</component>
