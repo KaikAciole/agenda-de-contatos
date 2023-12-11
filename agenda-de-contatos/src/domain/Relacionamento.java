@@ -2,7 +2,7 @@ package domain;
 
 public enum Relacionamento {
     COLEGA("Colega"),
-    FAMILIA("Família"),
+    FAMILIA("Familia"),
     AMIGO("Amigo"),
     INIMIGO("Inimigo"),
     EMERGENCIA("Emergencia"),

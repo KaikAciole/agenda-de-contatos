@@ -2,10 +2,11 @@ package GUI;
 
 import domain.Agenda;
 import domain.Contato;
+import domain.Relacionamento;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.List;
-import java.util.Objects;
 
 public class MainWindow extends JFrame {
     private static MainWindow instance;
@@ -20,11 +21,10 @@ public class MainWindow extends JFrame {
     private JLabel jLabel3;
     private JLabel jLabelFiltrar;
     private JList<String> jList1;
-    private JList<String> jListBusca;
+    private Font fonte;
     private JMenu jMenu1;
     private JMenu jMenu2;
     private JMenuBar jMenuBar1;
-    private JPanel jPainelBotoes;
     private JPanel jPainelBotoes1;
     private JPanel jPainelBuscar2;
     private JPanel jPainelLista;
@@ -48,7 +48,6 @@ public class MainWindow extends JFrame {
     @SuppressWarnings("unchecked")
     private void initComponents() {
 
-        jPainelBotoes = new JPanel();
         jPanel1 = new JPanel();
         jPainelBotoes1 = new JPanel();
         jBotaoAdicionar1 = new JButton();
@@ -58,7 +57,7 @@ public class MainWindow extends JFrame {
         jPainelLista = new JPanel();
         jScrollPane1 = new JScrollPane();
         jList1 = new JList<>();
-        jListBusca = new JList<>();
+        fonte = new Font("Roboto", Font.PLAIN, 18);
         jPainelBuscar2 = new JPanel();
         jLabel3 = new JLabel();
         jFormattedTextField3 = new JFormattedTextField();
@@ -127,6 +126,8 @@ public class MainWindow extends JFrame {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+
+        jList1.setFont(fonte);
         jScrollPane1.setViewportView(jList1);
 
         javax.swing.GroupLayout jPainelListaLayout = new javax.swing.GroupLayout(jPainelLista);
@@ -153,7 +154,7 @@ public class MainWindow extends JFrame {
             }
         });
 
-        jComboBoxFiltrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chamada de Vídeo", "Colega", "Família", "Amigo", "Inimigo", "Emergência", "Whatsapp", "Telegram", "Telefone" }));
+        jComboBoxFiltrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tudo", "Chamada de Vídeo", "Colega", "Familia", "Amigo", "Inimigo", "Emergencia", "Whatsapp", "Telegram", "Telefone" }));
         jComboBoxFiltrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxFiltrarActionPerformed(evt);
@@ -269,7 +270,6 @@ public class MainWindow extends JFrame {
         }
 
         jBotaoPesquisar.addActionListener(e -> buscarContato());
-        jBotaoPesquisar.addActionListener(e -> buscarContato());
 
     }
 
@@ -294,24 +294,23 @@ public class MainWindow extends JFrame {
     private List<Contato> buscarContato(){
         String termo = jFormattedTextField3.getText();
         if(termo.equals("")){
+            atualizarListaContatos();
             JOptionPane.showMessageDialog(this, "Digite algo antes de procurar!");
 
         }
         else{
-            jList1.setVisible(false);
+            // Novo código
+            DefaultListModel<String> model = new DefaultListModel<>();
+            atualizarListaContatos();
 
-            jListBusca.setModel(new javax.swing.AbstractListModel<String>() {
-                String[] strings = agenda.exibirContato(termo).stream()
-                        .map(contato -> contato.getDescricao())
-                        .toArray(String[]::new);
+            // Preencher o modelo com os contatos da agenda
+            List<Contato> contatos = agenda.exibirContato(termo);
+            for (Contato contato : contatos) {
+                    model.addElement(contato.getDescricao());
+            }
 
-                public int getSize() { return strings.length; }
-                public String getElementAt(int i) { return strings[i]; }
-            });
-
-            jScrollPane1.setViewportView(jListBusca);
-            jBotaoEditar1.addActionListener(e -> editarContato(jListBusca.getSelectedIndex(), jListBusca));
-            jBotaoExcluir1.addActionListener(e -> excluirContato(jListBusca.getSelectedIndex(), jListBusca));
+            // Definir o novo modelo na JList
+            jList1.setModel(model);
         }
         return null;
     }
@@ -321,11 +320,12 @@ public class MainWindow extends JFrame {
     }
 
     private void jComboBoxFiltrarActionPerformed(java.awt.event.ActionEvent evt) {
-        int item = jComboBoxFiltrar.getSelectedIndex();
-        if (item == 1){
-            filtrarListaContatosColega();
-        }
-    }
+        String item = jComboBoxFiltrar.getSelectedItem().toString();
+        if (item.equalsIgnoreCase("tudo")) {
+            atualizarListaContatos();
+        }else{
+            filtrarListaContatos(item);
+    }}
 
     private void excluirContato(int index, JList lista) {
         if (index >= 0){
@@ -337,13 +337,21 @@ public class MainWindow extends JFrame {
         }
     }
 
-    public void filtrarListaContatosColega(){
+    public void filtrarListaContatos(String filtro){
         DefaultListModel<String> model = new DefaultListModel<>();
+
 
         // Preencher o modelo com os contatos da agenda
         List<Contato> contatos = agenda.listarContatos();
         for (Contato contato : contatos) {
-            if(contato.getRelacionamento().toString().equalsIgnoreCase("Colega")){
+            if(filtro.equalsIgnoreCase("chamada de vídeo")){
+                if (contato.getRedeSocial().toString().equalsIgnoreCase("telegram") ||
+                        contato.getRedeSocial().toString().equalsIgnoreCase("whatsapp")) {
+                    model.addElement(contato.getDescricao());
+                }
+            }
+            if (contato.getRelacionamento().toString().equalsIgnoreCase(filtro) ||
+                    contato.getRedeSocial().toString().equalsIgnoreCase(filtro)) {
                 model.addElement(contato.getDescricao());
             }
         }
