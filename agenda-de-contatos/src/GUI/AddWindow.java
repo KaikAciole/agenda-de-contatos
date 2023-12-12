@@ -70,7 +70,7 @@ public class AddWindow extends JFrame {
         jSeparator3 = new JSeparator();
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(457, 586));
+        setMinimumSize(new Dimension(499, 617));
 
         jLabelNome.setFont(new Font("Segoe UI", 1, 14)); // NOI18N
         jLabelNome.setForeground(new Color(0, 0, 51));

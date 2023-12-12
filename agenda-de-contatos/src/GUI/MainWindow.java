@@ -22,9 +22,6 @@ public class MainWindow extends JFrame {
     private JLabel jLabelFiltrar;
     private JList<String> jList1;
     private Font fonte;
-    private JMenu jMenu1;
-    private JMenu jMenu2;
-    private JMenuBar jMenuBar1;
     private JPanel jPainelBotoes1;
     private JPanel jPainelBuscar2;
     private JPanel jPainelLista;
@@ -65,13 +62,10 @@ public class MainWindow extends JFrame {
         jLabelFiltrar = new JLabel();
         jPainelTitulo = new JPanel();
         jTituloContatos = new JLabel();
-        jMenuBar1 = new JMenuBar();
-        jMenu1 = new JMenu();
-        jMenu2 = new JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agenda de Contatos");
-        setMinimumSize(new java.awt.Dimension(420, 580));
+        setMinimumSize(new java.awt.Dimension(499, 617));
 
         jBotaoAdicionar1.setBackground(new java.awt.Color(0, 0, 51));
         jBotaoAdicionar1.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,43 +76,43 @@ public class MainWindow extends JFrame {
             }
         });
 
-        jBotaoExcluir1.setBackground(new java.awt.Color(0, 0, 51));
-        jBotaoExcluir1.setForeground(new java.awt.Color(255, 255, 255));
+        jBotaoExcluir1.setBackground(new Color(0, 0, 51));
+        jBotaoExcluir1.setForeground(new Color(255, 255, 255));
         jBotaoExcluir1.setText("Excluir");
 
-        jBotaoEditar1.setBackground(new java.awt.Color(0, 0, 51));
-        jBotaoEditar1.setForeground(new java.awt.Color(255, 255, 255));
+        jBotaoEditar1.setBackground(new Color(0, 0, 51));
+        jBotaoEditar1.setForeground(new Color(255, 255, 255));
         jBotaoEditar1.setText("Exibir / Editar");
 
-        jBotaoPesquisar.setBackground(new java.awt.Color(0, 0, 51));
-        jBotaoPesquisar.setForeground(new java.awt.Color(255, 255, 255));
+        jBotaoPesquisar.setBackground(new Color(0, 0, 51));
+        jBotaoPesquisar.setForeground(new Color(255, 255, 255));
         jBotaoPesquisar.setText("OK");
 
-        javax.swing.GroupLayout jPainelBotoes1Layout = new javax.swing.GroupLayout(jPainelBotoes1);
+        GroupLayout jPainelBotoes1Layout = new GroupLayout(jPainelBotoes1);
         jPainelBotoes1.setLayout(jPainelBotoes1Layout);
         jPainelBotoes1Layout.setHorizontalGroup(
-                jPainelBotoes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelBotoes1Layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBotaoAdicionar1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBotaoEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBotaoExcluir1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                jPainelBotoes1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPainelBotoes1Layout.createSequentialGroup()
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBotaoAdicionar1, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBotaoEditar1, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBotaoExcluir1, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPainelBotoes1Layout.setVerticalGroup(
-                jPainelBotoes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPainelBotoes1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(jPainelBotoes1Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(jPainelBotoes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jBotaoExcluir1, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                                        .addComponent(jBotaoEditar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jBotaoAdicionar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPainelBotoes1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(jBotaoExcluir1, GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                                        .addComponent(jBotaoEditar1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jBotaoAdicionar1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap())
         );
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        jList1.setModel(new AbstractListModel<String>() {
             String[] strings = agenda.listarContatos().stream()
                     .map(contato -> contato.getDescricao())
                     .toArray(String[]::new);
@@ -130,31 +124,23 @@ public class MainWindow extends JFrame {
         jList1.setFont(fonte);
         jScrollPane1.setViewportView(jList1);
 
-        javax.swing.GroupLayout jPainelListaLayout = new javax.swing.GroupLayout(jPainelLista);
+        GroupLayout jPainelListaLayout = new GroupLayout(jPainelLista);
         jPainelLista.setLayout(jPainelListaLayout);
         jPainelListaLayout.setHorizontalGroup(
-                jPainelListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelListaLayout.createSequentialGroup()
+                jPainelListaLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPainelListaLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jScrollPane1)
                                 .addContainerGap())
         );
         jPainelListaLayout.setVerticalGroup(
-                jPainelListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelListaLayout.createSequentialGroup()
+                jPainelListaLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPainelListaLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 425, GroupLayout.PREFERRED_SIZE))
         );
 
-//        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AgendaDeContatos//agenda-de-contatos//src//img//contorno-da-lupa-de-pesquisa.png"))); // NOI18N
-
-        jFormattedTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField3ActionPerformed(evt);
-            }
-        });
-
-        jComboBoxFiltrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tudo", "Chamada de Vídeo", "Colega", "Familia", "Amigo", "Inimigo", "Emergencia", "Whatsapp", "Telegram", "Telefone" }));
+        jComboBoxFiltrar.setModel(new DefaultComboBoxModel<>(new String[] { "Tudo", "Chamada de Vídeo", "Colega", "Familia", "Amigo", "Inimigo", "Emergencia", "Whatsapp", "Telegram", "Telefone" }));
         jComboBoxFiltrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxFiltrarActionPerformed(evt);
@@ -164,33 +150,33 @@ public class MainWindow extends JFrame {
         jLabelFiltrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelFiltrar.setText("Filtrar por:");
 
-        javax.swing.GroupLayout jPainelBuscar2Layout = new javax.swing.GroupLayout(jPainelBuscar2);
+        GroupLayout jPainelBuscar2Layout = new GroupLayout(jPainelBuscar2);
         jPainelBuscar2.setLayout(jPainelBuscar2Layout);
         jPainelBuscar2Layout.setHorizontalGroup(
-                jPainelBuscar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelBuscar2Layout.createSequentialGroup()
+                jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPainelBuscar2Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jBotaoPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jFormattedTextField3, GroupLayout.PREFERRED_SIZE, 176, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jBotaoPesquisar, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabelFiltrar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBoxFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxFiltrar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                 .addGap(21, 21, 21))
         );
         jPainelBuscar2Layout.setVerticalGroup(
-                jPainelBuscar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addComponent(jFormattedTextField3)
-                        .addComponent(jBotaoPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBotaoPesquisar, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPainelBuscar2Layout.createSequentialGroup()
-                                .addGroup(jPainelBuscar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(jPainelBuscar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(jComboBoxFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                .addComponent(jComboBoxFiltrar, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(jLabelFiltrar))
                                         .addComponent(jLabel3))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPainelTitulo.setBackground(new java.awt.Color(0, 0, 51));
@@ -199,66 +185,56 @@ public class MainWindow extends JFrame {
         jTituloContatos.setForeground(new java.awt.Color(255, 255, 255));
         jTituloContatos.setText("Contatos");
 
-        javax.swing.GroupLayout jPainelTituloLayout = new javax.swing.GroupLayout(jPainelTitulo);
+        GroupLayout jPainelTituloLayout = new GroupLayout(jPainelTitulo);
         jPainelTitulo.setLayout(jPainelTituloLayout);
         jPainelTituloLayout.setHorizontalGroup(
-                jPainelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelTituloLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                jPainelTituloLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPainelTituloLayout.createSequentialGroup()
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTituloContatos)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPainelTituloLayout.setVerticalGroup(
-                jPainelTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPainelTituloLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(jPainelTituloLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jTituloContatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTituloContatos, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPainelBotoes1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPainelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPainelBuscar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(jPainelBotoes1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPainelTitulo, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPainelBuscar2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addContainerGap())
-                        .addComponent(jPainelLista, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPainelLista, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPainelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPainelBuscar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPainelLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPainelBotoes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPainelTitulo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPainelBuscar2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPainelLista, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPainelBotoes1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
 
-//        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pasta-aberta.png"))); // NOI18N
-        jMenu1.setText("File");
 
-//        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adicionar-contato.png"))); // NOI18N
-        jMenu2.setText("Adicionar");
-        jMenu1.add(jMenu2);
-
-        jMenuBar1.add(jMenu1);
-
-        setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -270,6 +246,7 @@ public class MainWindow extends JFrame {
         }
 
         jBotaoPesquisar.addActionListener(e -> buscarContato());
+
 
     }
 
@@ -297,26 +274,17 @@ public class MainWindow extends JFrame {
             atualizarListaContatos();
             JOptionPane.showMessageDialog(this, "Digite algo antes de procurar!");
 
-        }
-        else{
-            // Novo código
+        }else{
             DefaultListModel<String> model = new DefaultListModel<>();
             atualizarListaContatos();
 
-            // Preencher o modelo com os contatos da agenda
             List<Contato> contatos = agenda.exibirContato(termo);
             for (Contato contato : contatos) {
                     model.addElement(contato.getDescricao());
             }
-
-            // Definir o novo modelo na JList
             jList1.setModel(model);
         }
         return null;
-    }
-
-    private void jFormattedTextField3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
     }
 
     private void jComboBoxFiltrarActionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,7 +308,6 @@ public class MainWindow extends JFrame {
     public void filtrarListaContatos(String filtro){
         DefaultListModel<String> model = new DefaultListModel<>();
 
-
         // Preencher o modelo com os contatos da agenda
         List<Contato> contatos = agenda.listarContatos();
         for (Contato contato : contatos) {
@@ -356,8 +323,7 @@ public class MainWindow extends JFrame {
             }
         }
 
-        // Definir o novo modelo na JList
-        jList1.setModel(model);
+        jList1.setModel(model);  //Definir o novo modelo na JList
     }
 
     public void atualizarListaContatos(JList lista) {
@@ -369,8 +335,7 @@ public class MainWindow extends JFrame {
             model.addElement(contato.getDescricao());
         }
 
-        // Definir o novo modelo na JList
-        lista.setModel(model);
+        lista.setModel(model);  // Definir o novo modelo na JList
     }
 
     public void atualizarListaContatos() {
@@ -390,15 +355,10 @@ public class MainWindow extends JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
@@ -408,10 +368,10 @@ public class MainWindow extends JFrame {
             java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -10,10 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95fcf6ac-ec94-403f-8218-629167afa84a" name="Changes" comment="Completo 1.0">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/agendaDeContatos_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agenda-de-contatos/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agendaDeContatos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/agendaDeContatos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/AddWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/ScreenContato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/agenda-de-contatos/src/GUI/ScreenMain.java" beforeDir="false" />
     </list>
     <list id="4cdfae35-4ad1-41eb-819b-3d66c4cbe130" name="Changes by Jef-Bot" comment="Changes by Jef-Bot" />
     <list id="0da335a2-c9be-4e6f-8e80-473a07198cca" name="Changes by Ramon" comment="Changes by Ramon" />
@@ -72,7 +74,7 @@
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Kaik Aciole/Documents/POO/agendaDeContatos/out/artifacts/agendaDeContatos_jar/agendaDeContatos.jar",
+    "last_opened_file_path": "C:/Users/Kaik Aciole/Documents/POO/agendaDeContatos/out/artifacts/agendaDeContatos_jar2/agendaDeContatos.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -185,6 +187,7 @@
       <workItem from="1702090947151" duration="6086000" />
       <workItem from="1702313442080" duration="6597000" />
       <workItem from="1702323373067" duration="365000" />
+      <workItem from="1702336322099" duration="5485000" />
     </task>
     <task id="LOCAL-00001" summary="menu de edição">
       <option name="closed" value="true" />
