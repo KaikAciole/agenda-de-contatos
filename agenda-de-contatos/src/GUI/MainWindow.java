@@ -2,10 +2,10 @@ package GUI;
 
 import domain.Agenda;
 import domain.Contato;
-import domain.Relacionamento;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Comparator;
 import java.util.List;
 
 public class MainWindow extends JFrame {
@@ -17,7 +17,7 @@ public class MainWindow extends JFrame {
     private JButton jBotaoExcluir1;
     private JButton jBotaoPesquisar;
     private JComboBox<String> jComboBoxFiltrar;
-    private JFormattedTextField jFormattedTextField3;
+    private JTextField jTextFieldPesquisar;
     private JLabel jLabel3;
     private JLabel jLabelFiltrar;
     private JList<String> jList1;
@@ -57,7 +57,7 @@ public class MainWindow extends JFrame {
         fonte = new Font("Roboto", Font.PLAIN, 18);
         jPainelBuscar2 = new JPanel();
         jLabel3 = new JLabel();
-        jFormattedTextField3 = new JFormattedTextField();
+        jTextFieldPesquisar = new JTextField();
         jComboBoxFiltrar = new JComboBox<>();
         jLabelFiltrar = new JLabel();
         jPainelTitulo = new JPanel();
@@ -112,14 +112,7 @@ public class MainWindow extends JFrame {
                                 .addContainerGap())
         );
 
-        jList1.setModel(new AbstractListModel<String>() {
-            String[] strings = agenda.listarContatos().stream()
-                    .map(contato -> contato.getDescricao())
-                    .toArray(String[]::new);
-
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        atualizarListaContatos();
 
         jList1.setFont(fonte);
         jScrollPane1.setViewportView(jList1);
@@ -156,7 +149,7 @@ public class MainWindow extends JFrame {
                 jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(GroupLayout.Alignment.TRAILING, jPainelBuscar2Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jFormattedTextField3, GroupLayout.PREFERRED_SIZE, 176, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldPesquisar, GroupLayout.PREFERRED_SIZE, 176, GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jBotaoPesquisar, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel3)
@@ -168,8 +161,8 @@ public class MainWindow extends JFrame {
         );
         jPainelBuscar2Layout.setVerticalGroup(
                 jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(jFormattedTextField3)
-                        .addComponent(jBotaoPesquisar, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldPesquisar, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBotaoPesquisar, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPainelBuscar2Layout.createSequentialGroup()
                                 .addGroup(jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                                         .addGroup(jPainelBuscar2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
@@ -269,7 +262,7 @@ public class MainWindow extends JFrame {
     }
 
     private List<Contato> buscarContato(){
-        String termo = jFormattedTextField3.getText();
+        String termo = jTextFieldPesquisar.getText();
         if(termo.equals("")){
             atualizarListaContatos();
             JOptionPane.showMessageDialog(this, "Digite algo antes de procurar!");
@@ -342,7 +335,16 @@ public class MainWindow extends JFrame {
         DefaultListModel<String> model = new DefaultListModel<>();
 
         // Preencher o modelo com os contatos da agenda
-        List<Contato> contatos = agenda.listarContatos();
+        List<Contato> contatos = agenda.listarContatos().stream().sorted(new Comparator<Contato>() {
+            @Override
+            public int compare(Contato c1, Contato c2) {
+                String nomeSobrenome1 = c1.getNome() + c1.getSobrenome();
+                String nomeSobrenome2 = c2.getNome() + c2.getSobrenome();
+
+                return nomeSobrenome1.compareTo(nomeSobrenome2);
+            }
+        }).toList();
+
         for (Contato contato : contatos) {
             model.addElement(contato.getDescricao());
         }
